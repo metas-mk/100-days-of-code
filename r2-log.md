@@ -10,7 +10,7 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 
 ### R2D1 - July 20th, 2019
 #### How to Setup ESLint for my project in VSCode?
-- ```cd`````into your  ```coding-repository```
+- ```cd``` into your  ```coding-repository```
 - ```npm init -y```
 - ```npm install -D eslint eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard```
 - create ```.estlintrc.js``` with ```module.exports = {"extends":"standard"};
