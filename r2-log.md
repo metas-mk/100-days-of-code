@@ -16,3 +16,7 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 - create ```.estlintrc.js``` with ```module.exports = {"extends":"standard"};
 - In VSCode make sure that ESLint is installed, id not then install it and restart VSCode
 
+**How to push your new local project to a GitHub Reporitory
+- I started a new git project locally and decided to also push this to GitHub to allow to track my progress on that too. Here is how I did this https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line
+
+
