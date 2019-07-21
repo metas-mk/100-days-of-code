@@ -26,11 +26,15 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 #### Quick styling for free - Semantic UI
 - checked out Sematic UI https://semantic-ui.com/
 - a Free and Open Source development development framework that helps create beautiful, responsive layouts using human-friendly HTML
+- just copied the semantic.min.css ling from https://cdnjs.com/libraries/semantic-ui and added to index.html as stylesheet
 - Using it for my component styling when lerning ReactJS
 
 #### First ReactJS Component with a Naive Approach
 - Creating a ReactJS component for comments with a naive approach (all comments in 1 JSX div)
 
+#### Faker.js
+- Using Faker.js to generate massive amounts of realistic fake data in Node.js and the browser during the development phase of my project (https://github.com/marak/Faker.js/).
+- ```npm install --save faker```
 
 
 
