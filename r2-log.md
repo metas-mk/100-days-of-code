@@ -28,6 +28,9 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 - a Free and Open Source development development framework that helps create beautiful, responsive layouts using human-friendly HTML
 - Using it for my component styling when lerning ReactJS
 
+#### First ReactJS Component with a Naive Approach
+- Creating a ReactJS component for comments with a naive approach (all comments in 1 JSX div)
+
 
 
 
