@@ -36,5 +36,6 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 - Using Faker.js to generate massive amounts of realistic fake data in Node.js and the browser during the development phase of my project (https://github.com/marak/Faker.js/).
 - ```npm install --save faker```
 
-
+#### Having issues starting local webserver
+- After install of Faker.js the local websever did not want to start anymore. I deleted the node_modules folder of my project and did a fresh ```npm install```. After that used ```npm start``` to try again, and worked.
 
