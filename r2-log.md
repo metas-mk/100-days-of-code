@@ -22,4 +22,12 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 #### ReactJS learning and coding
 - Learning JSX in theory and practical coding. Started with building components.
 
+### R2D2 - July 20th, 2019
+#### Quick styling for free - Semantic UI
+- checked out Sematic UI https://semantic-ui.com/
+- a Free and Open Source development development framework that helps create beautiful, responsive layouts using human-friendly HTML
+- Using it for my component styling when lerning ReactJS
+
+
+
 
