@@ -40,13 +40,17 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 - After install of Faker.js the local websever did not want to start anymore. I deleted the node_modules folder of my project and did a fresh ```npm install```. After that used ```npm start``` to try again, and worked.
 
 ### R2D3 - July 22nd, 2019
+#### new git command
+- first time used ```git commit --amend```
+  - allows you to adjust the last commit message directly via editor 
+
 #### Deduplicating JSX content, component nesting
 - refactoring JSX content and extracting to an own component ```CommentDetails.js```
 - coding convention: Components are written with UpperCamelCase
 - joined component with main App via ```export default``` and ```import```
 - using the component as JSX tag ``` ``` in render method of the main App
 
-#### Using react props system
+#### Props in a nutshell: Using react props system
 - component hierarchy, parent component, child components or children
 - props = properties
 - props: system for passing data from a parent component to a child component
