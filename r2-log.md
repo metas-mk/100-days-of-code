@@ -39,3 +39,9 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 #### Having issues starting local webserver
 - After install of Faker.js the local websever did not want to start anymore. I deleted the node_modules folder of my project and did a fresh ```npm install```. After that used ```npm start``` to try again, and worked.
 
+### R2D3 - July 22nd, 2019
+#### Deduplicating JSX content
+- refactoring JSX content and extracting to an own component ```CommentDetails.js```
+- Coding Convention: Components are written with UpperCamelCase
+- joined component with main App via ```export default``` and ```import```
+- using the component as JSX tag ``` ``` in render method of the main App
