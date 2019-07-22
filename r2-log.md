@@ -40,8 +40,16 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 - After install of Faker.js the local websever did not want to start anymore. I deleted the node_modules folder of my project and did a fresh ```npm install```. After that used ```npm start``` to try again, and worked.
 
 ### R2D3 - July 22nd, 2019
-#### Deduplicating JSX content
+#### Deduplicating JSX content, component nesting
 - refactoring JSX content and extracting to an own component ```CommentDetails.js```
-- Coding Convention: Components are written with UpperCamelCase
+- coding convention: Components are written with UpperCamelCase
 - joined component with main App via ```export default``` and ```import```
 - using the component as JSX tag ``` ``` in render method of the main App
+
+#### Using react props system
+- component hierarchy, parent component, child components or children
+- props = properties
+- props: system for passing data from a parent component to a child component
+  - goal is to customize or configure a child component
+  - provide information from parent to child (via JSX property) e.g. ```<CommentDetails date="Today 6:05PM" />```
+  - consume infomation in child (via props argument object) e.g. ```{props.date}```
