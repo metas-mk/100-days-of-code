@@ -63,3 +63,8 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 - Runtime type checking for React props and similar objects.
 - during debugging of metasfresh-webui-frontend I came past an eslint warning ```... is missing in props validation```
   - doumentation here https://www.npmjs.com/package/prop-types
+
+#### Component Reuse ReactJS
+- component nesting: a component can be shown inside of another
+- component reusability: components shall be easily reusable through out an application
+- component configuration: a component shall be configurable when it's created
