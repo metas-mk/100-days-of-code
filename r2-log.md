@@ -68,3 +68,7 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 - component nesting: a component can be shown inside of another
 - component reusability: components shall be easily reusable through out an application
 - component configuration: a component shall be configurable when it's created
+
+#### Nesting components & props.children
+- wrapped the comments component into an approval component via jsx
+- used ```props.children``` to consume the nested component
