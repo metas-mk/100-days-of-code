@@ -57,3 +57,9 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
   - goal is to customize or configure a child component
   - provide information from parent to child (via JSX property) e.g. ```<CommentDetails date="Today 6:05PM" />```
   - consume infomation in child (via props argument object) e.g. ```{props.date}```
+
+### R2D4 - July 23rd, 2019
+#### What is props validation?
+- Runtime type checking for React props and similar objects.
+- during debugging of metasfresh-webui-frontend I came past an eslint warning ```... is missing in props validation```
+  - doumentation here https://www.npmjs.com/package/prop-types
