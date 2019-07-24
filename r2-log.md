@@ -62,7 +62,7 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 #### What is props validation?
 - Runtime type checking for React props and similar objects.
 - during debugging of metasfresh-webui-frontend I came past an eslint warning ```... is missing in props validation```
-  - doumentation here https://www.npmjs.com/package/prop-types
+  - documentation here https://www.npmjs.com/package/prop-types
 
 #### Component Reuse ReactJS
 - component nesting: a component can be shown inside of another
@@ -72,3 +72,8 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 #### Nesting components & props.children
 - wrapped the comments component into an approval component via jsx
 - used ```props.children``` to consume the nested component
+
+### R2D5 - July 24th, 2019
+#### Function based vs. class based components
+- function based: good for simple (JSX) content
+- class based: good for just about everything else (including event handling)
