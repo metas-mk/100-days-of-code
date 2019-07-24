@@ -77,3 +77,6 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 #### Function based vs. class based components
 - function based: good for simple (JSX) content
 - class based: good for just about everything else (including event handling)
+  - easier code organization
+  - can use ```state``` means easier to handle user input
+  - understands lifecycle events, means easier to do things when the app first starts
