@@ -80,3 +80,9 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
   - easier code organization
   - can use ```state``` means easier to handle user input
   - understands lifecycle events, means easier to do things when the app first starts
+
+### R2D6 - July 25th, 2019
+#### metasfresh webui frontend with ReactJS
+- further digging into the metasfresh webui frontend code
+- getting a better understanding about how things work after my first week of ReactJS learning
+- decided to start the developer documentation of metasfresh webui frontend as part of my learning time, I'm thinking about using JSDocs or Gatsby for this
