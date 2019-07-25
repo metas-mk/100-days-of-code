@@ -86,3 +86,8 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 - further digging into the metasfresh webui frontend code
 - getting a better understanding about how things work after my first week of ReactJS learning
 - decided to start the developer documentation of metasfresh webui frontend as part of my learning time, I'm thinking about using JSDocs or Gatsby for this
+
+#### ReactJS: metasfresh webui with Storybook
+- read about Storybook and how is can help developing encapsulated and reusable components
+- wrote a story for a small component in metasfresh webui project and tested different configurations in isolation
+- the styling is not compoinent based in metasfresh, so the component is not looking good in Storybook runner. I will see how to change this.
