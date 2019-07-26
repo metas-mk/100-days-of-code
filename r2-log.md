@@ -91,3 +91,7 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 - read about Storybook and how is can help developing encapsulated and reusable components
 - wrote a story for a small component in metasfresh webui project and tested different configurations in isolation
 - the styling is not compoinent based in metasfresh, so the component is not looking good in Storybook runner. I will see how to change this.
+
+### R2D7 - July 26th, 2019
+#### new ReactJS Challemge project: seasons
+- created a new ReactJS challenge project to learn more about class based components, state and event handling
