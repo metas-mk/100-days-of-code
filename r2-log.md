@@ -26,7 +26,7 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 #### Quick styling for free - Semantic UI
 - checked out Sematic UI https://semantic-ui.com/
 - a Free and Open Source development development framework that helps create beautiful, responsive layouts using human-friendly HTML
-- just copied the semantic.min.css ling from https://cdnjs.com/libraries/semantic-ui and added to index.html as stylesheet
+- just copied the semantic.min.css link from https://cdnjs.com/libraries/semantic-ui and added to index.html as stylesheet
 - Using it for my component styling when lerning ReactJS
 
 #### First ReactJS Component with a Naive Approach
@@ -95,3 +95,8 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 ### R2D7 - July 26th, 2019
 #### new ReactJS Challemge project: seasons
 - created a new ReactJS challenge project to learn more about class based components, state and event handling
+- adding sematic ui to the project
+
+#### Using Geolocation API
+- checked out and used the Geolocation API which is included in most browsers
+- documentation can be found here https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
