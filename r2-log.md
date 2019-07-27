@@ -174,3 +174,6 @@ Babeljs will take care about generating the right code for the consructor and su
 #### Using component css
 - import css file in component using ```import 'Component.css';```
 - webpack takes this information and includes the css into the index.html file
+
+#### React component defaultProps
+- using ```ComponentName.defaultProps``` object to declare default props in case the component properties were not set when instanciating
