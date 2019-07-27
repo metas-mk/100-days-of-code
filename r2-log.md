@@ -122,8 +122,31 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 - using if statements in render() method to decide what content shall be returned
 
 #### React component lifecycle
-- constructor
-- render, content is now visible on screen
-- componentDidMount, sit and wait for updates
-- componentDidUpdate, sit and wait until this component is not longer shown
-- componentWillUnmount
+- Lifecycle methods are functions that are called discrete or distinct during the lifecycle time
+    - constructor 
+        - optional
+        - defined and called when new component is created
+        - good place to do one-time setup e.g. state initialization
+        - for cleaner code, it is not recommended to add data loading to the constructor method. leave this for componentDidMount method
+    - render 
+        - not optional
+        - content is now visible on screen
+        - important: avoid doing anything besides returning JSX
+    - componentDidMount 
+        - optional
+        - is called immediatly after a component shows up first time on the screen/ browser
+        - good place to do data loading
+    - componentDidUpdate
+        - optional
+        - is called automatically every time our component is updated
+        - every time the render method is called, the jsx will be returned and componentDidUpdate will be invoked
+        - good place to do data loading when state/ props change
+    - componentWillUnmount
+        - optional
+        - is called automatically as soon a component will be vanished
+        - cleanup of a component
+        - good place to do cleanup (especially for non-React stuff)
+    - Further livecycle methods exist but are very rarely used
+        - shouldComponentUpdate
+        - getDerivedStateFromProps
+        - getSnapshotBeforeUpdate
