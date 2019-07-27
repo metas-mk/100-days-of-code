@@ -170,3 +170,7 @@ Babeljs will take care about generating the right code for the consructor and su
 #### Passing state as props
 - passing a state property as prop to a sub component
 - when state property changes then the component is rerendered and also the sub component is rerendered automatically
+
+#### Using component css
+- import css file in component using ```import 'Component.css';```
+- webpack takes this information and includes the css into the index.html file
