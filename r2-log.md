@@ -117,3 +117,6 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
   - ```State``` must be initialized when a component is created
   - Never do direct assignment to state (besides initialization), always use setState 
   - don't use heavy calculations in render method (is called a lot and shall remain performant)
+
+#### Conditional rendering in React
+- using if statements in render() method to decide what content shall be returned
