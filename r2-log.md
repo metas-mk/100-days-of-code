@@ -166,3 +166,7 @@ class App extends React.Component {
     state = {lat: null, errorMessage: ''};
 ```
 Babeljs will take care about generating the right code for the consructor and super(props).
+
+#### Passing state as props
+- passing a state property as prop to a sub component
+- when state property changes then the component is rerendered and also the sub component is rerendered automatically
