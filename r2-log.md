@@ -160,12 +160,12 @@ class App extends React.Component {
       this.state = {lat: null, errorMessage: ''};
     }
 ```
-can be substituded easily with
+can be substituded easily with an instance property
 ```js
 class App extends React.Component {
     state = {lat: null, errorMessage: ''};
 ```
-Babeljs will take care about generating the right code for the consructor and super(props).
+Babeljs will take care about generating the right code for the constructor and super(props).
 
 #### Passing state as props
 - passing a state property as prop to a sub component
