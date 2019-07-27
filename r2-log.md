@@ -120,3 +120,10 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 
 #### Conditional rendering in React
 - using if statements in render() method to decide what content shall be returned
+
+#### React component lifecycle
+- constructor
+- render, content is now visible on screen
+- componentDidMount, sit and wait for updates
+- componentDidUpdate, sit and wait until this component is not longer shown
+- componentWillUnmount
