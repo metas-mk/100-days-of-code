@@ -93,10 +93,25 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
 - the styling is not compoinent based in metasfresh, so the component is not looking good in Storybook runner. I will see how to change this.
 
 ### R2D7 - July 26th, 2019
-#### new ReactJS Challemge project: seasons
+#### new ReactJS Challenge project: seasons
 - created a new ReactJS challenge project to learn more about class based components, state and event handling
 - adding sematic ui to the project
 
 #### Using Geolocation API
 - checked out and used the Geolocation API which is included in most browsers
 - documentation can be found here https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
+
+### R2D8 - July 27th, 2019
+#### Refactoring function based to class based component
+- Rules of class base components
+  - must be a javascript class
+  - must extend subclass React.Component
+  -  muste define a ```render``` method that returns some amount of jsx
+
+#### State in React Components
+- Rules of State
+  - only usable with class components (can be used with functional components using the ```hooks``` system)
+  - don't confuse props with state
+  - ```State``` is a javascipt object that contains data relevant to a component
+  - updating ```state``` on a component causes the component to (almost) instantly rerender
+  - ```State``` must be initialized when a component is created
