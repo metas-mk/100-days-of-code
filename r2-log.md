@@ -150,3 +150,19 @@ In my first life I was a COBOl and Mainframe Software Developer. Being a Product
         - shouldComponentUpdate
         - getDerivedStateFromProps
         - getSnapshotBeforeUpdate
+
+#### Avoid the constructor-super-props-state ceremony?
+The constructor part of a React Component
+```js
+class App extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {lat: null, errorMessage: ''};
+    }
+```
+can be substituded easily with
+```js
+class App extends React.Component {
+    state = {lat: null, errorMessage: ''};
+```
+Babeljs will take care about generating the right code for the consructor and super(props).
