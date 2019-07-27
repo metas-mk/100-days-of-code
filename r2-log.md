@@ -177,3 +177,8 @@ Babeljs will take care about generating the right code for the consructor and su
 
 #### React component defaultProps
 - using ```ComponentName.defaultProps``` object to declare default props in case the component properties were not set when instanciating
+
+#### Avoiding conditionals in render method
+- don't use conditionals in render method
+- use a helper method instead (e.g. renderContent())
+- this makes it easier to maintain the the JSX layout/ structure that's returned
