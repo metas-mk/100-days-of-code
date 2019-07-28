@@ -190,3 +190,4 @@ Babeljs will take care about generating the right code for the constructor and s
 
 #### New pics project
 - created a new react app called pics
+- creating a multi component structure with components folder in src folder
