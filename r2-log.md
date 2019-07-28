@@ -182,3 +182,8 @@ Babeljs will take care about generating the right code for the constructor and s
 - don't use conditionals in render method
 - use a helper method instead (e.g. renderContent())
 - this makes it easier to maintain the the JSX layout/ structure that's returned
+
+### R2D9 - July 28th, 2019
+#### ReactJS coding challenges
+- refactored a function-based to a class-based component
+- created a Clock component that shows the time in seconds with componentDidMount, interval and state change with rerender 
