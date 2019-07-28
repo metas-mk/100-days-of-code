@@ -187,3 +187,6 @@ Babeljs will take care about generating the right code for the constructor and s
 #### ReactJS coding challenges
 - refactored a function-based to a class-based component
 - created a Clock component that shows the time in seconds with componentDidMount, interval and state change with rerender 
+
+#### New pics project
+- created a new react app called pics
