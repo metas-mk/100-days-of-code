@@ -200,3 +200,7 @@ Babeljs will take care about generating the right code for the constructor and s
   - onChange: user changes text in an input
   - onClick: user clicks on something
   - onSubmit: user submits a form
+- community convention for event handling methods
+  - on (prefix)
+  - Input (tagname)
+  - Change (eventname)
