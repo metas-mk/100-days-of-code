@@ -196,3 +196,4 @@ Babeljs will take care about generating the right code for the constructor and s
 #### Learninf and coding ReactJS
 - new SearchBar component for my project
 - added sematic UI CSS to my project and did some styling with it
+- added an event Handler to SearchBar component with OnChange event
