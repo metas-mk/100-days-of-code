@@ -193,7 +193,10 @@ Babeljs will take care about generating the right code for the constructor and s
 - creating a multi component structure with components folder in src folder
 
 ### R2D10 - July 29th, 2019
-#### Learninf and coding ReactJS
+#### Learning and coding ReactJS
 - new SearchBar component for my project
 - added sematic UI CSS to my project and did some styling with it
-- added an event Handler to SearchBar component with OnChange event
+- added an event Handler to SearchBar component with onChange event
+  - onChange: user changes text in an input
+  - onClick: user clicks on something
+  - onSubmit: user submits a form
