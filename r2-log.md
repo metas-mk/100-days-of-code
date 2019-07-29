@@ -191,3 +191,8 @@ Babeljs will take care about generating the right code for the constructor and s
 #### New pics project
 - created a new react app called pics
 - creating a multi component structure with components folder in src folder
+
+### R2D10 - July 29th, 2019
+#### Learninf and coding ReactJS
+- new SearchBar component for my project
+- added sematic UI CSS to my project and did some styling with it
