@@ -209,4 +209,11 @@ Babeljs will take care about generating the right code for the constructor and s
 #### Debugging & Fixing metasfresh
 - debugged metasfresh WebUI and found out why the Webcam usage was failing in newer Browser versions
 - Reason was a deprecated method that was used in the Image component
-- fixed and tested 
+- fixed and tested
+
+### R2D12 - July 31th, 2019
+#### Diving into JSDoc
+- Reading into JSDoc, starting to do the setup for metasfresh WebUI project
+
+#### Code coverage with Cypress
+- Watching a webcast about howto reach code coverage with cypress testing
