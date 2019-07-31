@@ -204,3 +204,9 @@ Babeljs will take care about generating the right code for the constructor and s
   - on (prefix)
   - Input (tagname)
   - Change (eventname)
+
+### R2D11 - July 30th, 2019
+#### Debugging & Fixing metasfresh
+- debugged metasfresh WebUI and found out why the Webcam usage was failing in newer Browser versions
+- Reason was a deprecated method that was used in the Image component
+- fixed and tested 
