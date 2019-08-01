@@ -229,3 +229,13 @@ onChange={this.onInputChange}
 // Alternate approach for oneline functions with arrow function
 onChange={e => console.log(e.target.value)}
 ```
+
+#### Controlled vs. uncontrolled components example
+- controlled
+    - user types input
+    - callback gets invoked
+    - we call setState with the new value
+    - component rerenders
+    - input is told what value it has (coming from state)
+- uncontrolled
+    - to know the value one has to get it from input dom element
