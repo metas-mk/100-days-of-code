@@ -222,7 +222,7 @@ Babeljs will take care about generating the right code for the constructor and s
 #### Learning ReactJS
 - learned an alternate way of adding an event handler to an onChange event
 ```js
-// Approach with callback function
+// Approach with callback function reference
 onChange={this.onInputChange}
 ```
 ```js
