@@ -237,5 +237,10 @@ onChange={e => console.log(e.target.value)}
     - we call setState with the new value
     - component rerenders
     - input is told what value it has (coming from state)
+```js
+value={this.state.term}
+onChange={e => this.setState({ term: e.target.value })}
+```
+
 - uncontrolled
     - to know the value one has to get it from input dom element
