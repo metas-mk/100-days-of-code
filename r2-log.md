@@ -217,3 +217,15 @@ Babeljs will take care about generating the right code for the constructor and s
 
 #### Code coverage with Cypress
 - Watching a webcast about howto reach code coverage with cypress testing
+
+### R2D13 - August 1st, 2019
+#### Learning ReactJS
+- learned an alternate way of adding an event handler to an onChange event
+```js
+// Approach with callback function
+onChange={this.onInputChange}
+```
+```js
+// Alternate approach for oneline functions with arrow function
+onChange={e => console.log(e.target.value)}
+```
