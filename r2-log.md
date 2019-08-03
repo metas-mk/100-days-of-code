@@ -259,3 +259,27 @@ render() {
       <div className="ui segment">
         <form onSubmit={this.onFormSubmit} className="ui form">
 ```
+
+#### Understanding 'this' in JavaScript
+- had a weird error today ````TypeError: Cannot read property 'term' of undefined```
+- happened with the following code
+```js
+  onFormSubmit(event) {
+    event.preventDefault();
+    console.log(this.state.term);
+  }
+   render() {
+    return (
+      <div className="ui segment">
+        <form onSubmit={this.onFormSubmit} className="ui form">
+...
+```
+- roughly: this is initially bound to the object left of the dot to the method/ function call
+- some solutions to solve the case
+
+```js
+  constructor() {
+    super();
+    this.onFormSubmit = this.onFormSubmit.bind(this);
+  }  
+```
