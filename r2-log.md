@@ -283,7 +283,15 @@ render() {
     this.onFormSubmit = this.onFormSubmit.bind(this);
   }  
 ```
-### R2D14 - August 3rd, 2019
+- alternatively can be solved in using ES6 arrwof function instead.
+```js
+  onFormSubmit = event => {
+    event.preventDefault();
+    console.log(this.state.term);
+  }
+
+
+### R2D15 - August 3rd, 2019
 #### VSCode: How to use emmet in JSX
 ```json
   "emmet.includeLanguages": {
