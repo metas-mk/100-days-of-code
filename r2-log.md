@@ -246,7 +246,7 @@ onChange={e => this.setState({ term: e.target.value })}
     - to know the value one has to get it from input dom element
 
 ### R2D14 - August 2nd, 2019
-#### Prevent default browser logic fro HTML Form
+#### Prevent default browser logic for HTML Form
 - after pressing ```return``` or ```enter``` in an HTML for, we don't want the page to be refreshed automatically. We ofren want to prevent the browser from doing to. This can be done with overwriting the onSubmit event.
 ```js
 ...
@@ -282,4 +282,11 @@ render() {
     super();
     this.onFormSubmit = this.onFormSubmit.bind(this);
   }  
+```
+### R2D14 - August 2nd, 2019
+#### VSCode: How to use emmet in JSX
+```json
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  }
 ```
