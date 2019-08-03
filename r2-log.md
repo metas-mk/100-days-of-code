@@ -408,3 +408,17 @@ onFormSubmit = event => {
   - Endpoint for search photos `/search/photos`
   - params object added
   - headers object added fot Authorization
+- axios.get() is an asynch function. The result is a promise. The promise can call a callback function as soon the response has arrived.
+
+```js
+// promise ... then
+axios.get(...).then(() => {...});
+```
+
+- alternative with asynch ... await (preferred)
+
+```js
+async onSearchSubmit(term) {
+    // async ... await (preferred)
+    const response = await axios.get(...);
+```
