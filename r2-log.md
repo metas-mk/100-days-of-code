@@ -283,7 +283,7 @@ render() {
     this.onFormSubmit = this.onFormSubmit.bind(this);
   }  
 ```
-### R2D14 - August 2nd, 2019
+### R2D14 - August 3rd, 2019
 #### VSCode: How to use emmet in JSX
 ```json
   "emmet.includeLanguages": {
