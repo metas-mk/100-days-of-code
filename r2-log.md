@@ -289,7 +289,7 @@ render() {
     event.preventDefault();
     console.log(this.state.term);
   }
-
+```
 
 ### R2D15 - August 3rd, 2019
 #### VSCode: How to use emmet in JSX
@@ -297,4 +297,33 @@ render() {
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   }
+```
+
+#### Communicating child to parent
+- Invoking callbacks in children
+    - pass callback function reference in parent via prop in child component JSX
+    - in callback function of child then pass the state as argument to the referenced callback function via props
+
+*Parent component*
+```js
+class App extends React.Component {
+  onSearchSubmit(term) {
+    console.log(term);
+  }
+
+  render() {
+    return (
+      <div className="ui container" style={{ marginTop: '10px' }}>
+        <SearchBar onSubmit={this.onSearchSubmit} />
+```
+
+*Child component*
+```js
+// child
+ onFormSubmit = event => {
+    event.preventDefault();
+
+    // prop is the reference to callback function of App.onSearchSubmit()
+    this.props.onSubmit(this.state.term);
+  };
 ```
