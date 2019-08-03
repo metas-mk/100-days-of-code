@@ -244,3 +244,18 @@ onChange={e => this.setState({ term: e.target.value })}
 
 - uncontrolled
     - to know the value one has to get it from input dom element
+
+### R2D14 - August 2nd, 2019
+#### Prevent default browser logic fro HTML Form
+- after pressing ```return``` or ```enter``` in an HTML for, we don't want the page to be refreshed automatically. We ofren want to prevent the browser from doing to. This can be done with overwriting the onSubmit event.
+```js
+...
+  onFormSubmit(event) {
+    event.preventDefault();
+  }
+...
+render() {
+    return (
+      <div className="ui segment">
+        <form onSubmit={this.onFormSubmit} className="ui form">
+```
