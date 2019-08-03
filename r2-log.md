@@ -261,7 +261,7 @@ render() {
 ```
 
 #### Understanding 'this' in JavaScript
-- had a weird error today ````TypeError: Cannot read property 'term' of undefined```
+- had a weird error today ```TypeError: Cannot read property 'term' of undefined```
 - happened with the following code
 ```js
   onFormSubmit(event) {
