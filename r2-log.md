@@ -347,7 +347,7 @@ render() {
   }
 ```
 
-- alternatively can be solved in using ES6 arrwof function instead.
+- alternatively can be solved in using ES6 arrwow function instead.
 
 ```js
 onFormSubmit = event => {
@@ -421,4 +421,21 @@ axios.get(...).then(() => {...});
 async onSearchSubmit(term) {
     // async ... await (preferred)
     const response = await axios.get(...);
+```
+
+### R2D16 - August 4th, 2019
+
+#### Setting state after asynch requests
+
+- ran into the 'this' binding issue again. this time with an async funtion.
+- adjusted the function to an ES6 arrow funtion solved the issue
+
+```js
+onSearchSubmit = async term => {
+  // promise
+  const response = await axios.get('https://api.unsplash.com/search/photos', {...}
+    ...
+  });
+  this.setState({ images: response.data.results });
+};
 ```
