@@ -425,7 +425,7 @@ async onSearchSubmit(term) {
 
 ### R2D16 - August 4th, 2019
 
-#### Setting state after asynch requests
+#### Setting state after async requests
 
 - ran into the 'this' binding issue again. this time with an async funtion.
 - adjusted the function to an ES6 arrow funtion solved the issue
@@ -439,3 +439,8 @@ onSearchSubmit = async term => {
   this.setState({ images: response.data.results });
 };
 ```
+
+#### Axios: Extracted baseURL and headers into own file
+
+- created an own js file and folder structure to avoid having the API key and baseURL in Application component itself
+- added the folder to .gitignore to avoid commiting to public repository
