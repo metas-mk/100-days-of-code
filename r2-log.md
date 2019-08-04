@@ -444,3 +444,10 @@ onSearchSubmit = async term => {
 
 - created an own js file and folder structure to avoid having the API key and baseURL in Application component itself
 - added the folder to .gitignore to avoid commiting to public repository
+
+#### Rendering Lists with map
+
+- Pics project: Using array map to iterate over API response
+  - created a new ImageList component
+  - used array map to iterate over the API response and give out the images as image tag
+  - currently there is a warning in console 'Each child in ... an array or iterator should have a unique "key" prop. Will take care about that next.
