@@ -463,3 +463,4 @@ return <img key={image.id} src={image.urls.regular} alt="images" />;
 ```
 
 - adding a key prop also eliminates the warning `'Each child in ... an array or iterator should have a unique "key" prop`
+- adding an image alt property for a11y, filled with image.description from unsplash API response
