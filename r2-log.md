@@ -451,3 +451,15 @@ onSearchSubmit = async term => {
   - created a new ImageList component
   - used array map to iterate over the API response and give out the images as image tag
   - currently there is a warning in console 'Each child in ... an array or iterator should have a unique "key" prop. Will take care about that next.
+
+### R2D17 - August 5th, 2019
+
+#### Adding a key to list component
+
+- to allow React to find the needed list elements to rerender in a more efficient way, it is needed to add a key property to the list component root element that is returned
+
+```js
+return <img key={image.id} src={image.urls.regular} alt="images" />;
+```
+
+- adding a key prop also eliminates the warning `'Each child in ... an array or iterator should have a unique "key" prop`
