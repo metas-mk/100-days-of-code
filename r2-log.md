@@ -467,6 +467,14 @@ return <img key={image.id} src={image.urls.regular} alt="images" />;
 
 ### R2D18 - August 7th, 2019
 
+#### Styling the pics search results
+
 - adding some styling to the pics search result
 - included a css for ImageList component
 - adding grid style for image results
+- using grid-auto-rows to define the height of rows in grid styling
+- new ImageCard component. This shall allow to create individual styles per Image for grid style
+  - let the ImageCard render itself and its image
+    reach into the DOM and figure out the height of the image
+  - set the image height on state to get the component to rerender
+  - when rerendering, assign a 'grid-row-end' to make sure the image takes up the appropriate space
