@@ -475,6 +475,23 @@ return <img key={image.id} src={image.urls.regular} alt="images" />;
 - using grid-auto-rows to define the height of rows in grid styling
 - new ImageCard component. This shall allow to create individual styles per Image for grid style
   - let the ImageCard render itself and its image
-    reach into the DOM and figure out the height of the image
+    reach into the DOM and figure out the height of the image (via ReactRefs)
   - set the image height on state to get the component to rerender
   - when rerendering, assign a 'grid-row-end' to make sure the image takes up the appropriate space
+
+#### Sidenotes
+
+- only add to state when it's expected that the content will change over time, e.g. it does not make sense to add the property image-height to state for a given image.
+
+#### React Refs
+
+- gives access to an single DOM element. in vanilla JS the equivalent is `document.querySeletor()`
+- we create refs in the constructor, assign them to instance variables, then pass to a particular JSX element as props
+
+```js
+constructor(props) {
+    super(props);
+
+    this.ImageRef = React.createRef();
+  }
+```
