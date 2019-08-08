@@ -495,3 +495,11 @@ constructor(props) {
     this.ImageRef = React.createRef();
   }
 ```
+
+### R2D19 - August 8th, 2019
+
+#### Accessing the image height
+
+- when trying to access the image height in componentDidMount() via React.createRef().current.clientHeight it shows 0. What's happening?
+  - the component is loaded, but the browser has not downloaded the image yet
+  - whan checking the console.log of that image ref element it shows the clientHeight although. This happens because the browser is fancy and shows the infomraiton as one opens the object tree.
