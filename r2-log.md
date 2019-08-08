@@ -510,3 +510,15 @@ componentDidMount() {
     this.ImageRef.current.addEventListener('load', this.setSpans);
   }
 ```
+
+#### Same key/ value pair
+
+- when having identical key value pair in objects then it can be shortened since ES2015
+
+```js
+// until ES2015
+this.setState({ spans: spans });
+
+// since ES2015
+this.setState({ spans });
+```
