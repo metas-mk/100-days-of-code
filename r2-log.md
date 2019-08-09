@@ -522,3 +522,14 @@ this.setState({ spans: spans });
 // since ES2015
 this.setState({ spans });
 ```
+
+### R2D20 - August 9th, 2019
+
+#### Starting Youtube video search project
+
+- This project shall allow to search videos using the free youtube API. The app shall have a search bar, a video player and a list of videos that match the search criteria. The search results can be selected and then the video is started. The app shall be built with ReactJS. The following component hierarchy is planned:
+  - App
+    - Searchbar
+    - Video Detail
+    - Video List
+      - Video Item
