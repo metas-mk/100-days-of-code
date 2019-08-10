@@ -533,3 +533,14 @@ this.setState({ spans });
     - Video Detail
     - Video List
       - Video Item
+
+### R2D21 - August 10th, 2019
+
+#### New Component SearchBar
+
+- Created a new class based SearchBar component
+  - imported React (for JSX)
+  - added render method, return JSX
+  - added export statement
+- Import SearchBar in App component
+  - added SearchBar component to JSX render method
