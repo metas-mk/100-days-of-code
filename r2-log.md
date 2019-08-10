@@ -553,3 +553,10 @@ this.setState({ spans });
     - using `ui form`, `field`
   - Syling in App component
     - using `ui container`, adds a margin left/ right of the SearchBar component
+
+#### SearchBar improvements
+
+- turning SearchBar from an uncontrolled to controlled component
+  - storing the search term content in state instead of html form input element
+  - overriding the default browser behavior of form on enter
+    `event.preventDefault();`
