@@ -544,3 +544,12 @@ this.setState({ spans });
   - added export statement
 - Import SearchBar in App component
   - added SearchBar component to JSX render method
+
+#### Semantic UI
+
+- included [semantic ui CSS](https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css) to index.html
+  - Styling in SearchBar component
+    - using `className="ui segment`, this draws a rectangle
+    - using `ui form`, `field`
+  - Syling in App component
+    - using `ui container`, adds a margin left/ right of the SearchBar component
