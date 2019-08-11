@@ -595,6 +595,7 @@ export default axios.create({
 
 #### New Component VideoList
 
-- New functional component VideoList
-- Adding new component VideoList to App render method
-- Passing App state as props to VideoList
+- new functional component VideoList
+- adding new component VideoList to App render method
+- passing App state as props to VideoList
+- in VideoList destructuring props directly to ({videos})
