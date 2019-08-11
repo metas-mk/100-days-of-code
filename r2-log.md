@@ -606,3 +606,4 @@ export default axios.create({
 - creating mapp in VideoList and returning a VideoItem for each entry
 - adding video title from youtube API response
 - adding video thumbnails from youtube API response
+- adding some styling to VideoList and Video item with SemanticUI
