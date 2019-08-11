@@ -599,3 +599,10 @@ export default axios.create({
 - adding new component VideoList to App render method
 - passing App state as props to VideoList
 - in VideoList destructuring props directly to ({videos})
+
+#### New Component VideoItem
+
+- new functional component VideoItem
+- creating mapp in VideoList and returning a VideoItem for each entry
+- adding video title from youtube API response
+- adding video thumbnails from youtube API response
