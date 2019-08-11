@@ -567,7 +567,7 @@ this.setState({ spans });
 
 - Integrated the Youtube API
 - Using Axios to send requests and receive responses
-- created a new API Key at `https://console.developers.google.com`
+- created a new API Key at https://console.developers.google.com
 - created a new folder src/apis and added a new file called `youtube.js` there. This file keeps the API Key as variable.
 
 ```js
@@ -575,3 +575,20 @@ const KEY = '<api-key>';
 ```
 
 - added the src/apis folder to .gitignore
+- visited https://developers.google.com/youtube/v3/docs/search/list to find out how to use the youtube data api
+  - Request: `GET https://www.googleapis.com/youtube/v3/search`
+  - Parameters:
+    - part: 'snippet' (will show name, description of viedo)
+    - q: 'searchquery'
+    - maxResults: 5
+
+```js
+export default axios.create({
+  baseURL: 'https://www.googleapis.com/youtube/v3',
+  params: {
+    part: 'snippet',
+    maxResults: 5,
+    key: KEY
+  }
+});
+```
