@@ -592,3 +592,9 @@ export default axios.create({
   }
 });
 ```
+
+#### New Component VideoList
+
+- New functional component VideoList
+- Adding new component VideoList to App render method
+- Passing App state as props to VideoList
