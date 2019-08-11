@@ -560,3 +560,18 @@ this.setState({ spans });
   - storing the search term content in state instead of html form input element
   - overriding the default browser behavior of form on enter
     `event.preventDefault();`
+
+### R2D22 - August 11th, 2019
+
+#### Integrating the Youtube API
+
+- Integrated the Youtube API
+- Using Axios to send requests and receive responses
+- created a new API Key at `https://console.developers.google.com`
+- created a new folder src/apis and added a new file called `youtube.js` there. This file keeps the API Key as variable.
+
+```js
+const KEY = '<api-key>';
+```
+
+- added the src/apis folder to .gitignore
