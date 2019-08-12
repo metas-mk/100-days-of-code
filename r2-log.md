@@ -633,3 +633,10 @@ When communicating from parent to child, this is done via the props system. When
   - surrounding div tag with `ui segment`
   - div tag header with `ui header`
   - paragraph that takes the `{video.snippet.description}`
+
+#### Adding a video player to VideoDetails
+
+- added an iframe tag in VideoDetails component
+- surrounded by div tag with `ui embed` style (SemanticUI will take care about the styling)
+- how to embed a youtube video?
+  - check out youtube. press share button on aany video. press embed. it shows an iframe example. you can see how the url is built with video identifier and video if in it. this is what is needed for the embedded video url that shall be built.
