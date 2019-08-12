@@ -640,3 +640,7 @@ When communicating from parent to child, this is done via the props system. When
 - surrounded by div tag with `ui embed` style (SemanticUI will take care about the styling)
 - how to embed a youtube video?
   - Check out youtube. Press share button on any video. Press embed. It shows an iframe example. You can see how the url is built with video identifier and video of in it. This is what is needed for the embedded video url that shall be built.
+- getting rid of some warnings
+  - adding a title to VideoDetail iframe
+  - adding an alt prop to the img tage in VideoItem
+  - adding a key prop to VideoList div tag
