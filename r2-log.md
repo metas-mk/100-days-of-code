@@ -607,3 +607,20 @@ export default axios.create({
 - adding video title from youtube API response
 - adding video thumbnails from youtube API response
 - adding some styling to VideoList and Video item with SemanticUI
+
+### R2D23 - August 12th, 2019
+
+#### Communication from child to parent in ReactJS
+
+For the video player I want to select a VideoItem element. This shall show the seleted Video in the new VideoDetail component. How shall this be done?
+
+- App:
+  - state `selectedVideo: video`
+  - props `videos: [videos, ...]`
+  - props `onVideoSelect: () => ()`
+- VideoList
+  - props `video: video`
+  - props `onVideoSelect: () => ()`
+- VideoItem
+
+Create a new method in App component and pass a reference to that method down to VideoList. Further pass the reference down to VideoItem. Any time the user clicks a VideoItem we tell VideoItem to call the callback function `onVideoSelect`. When it calls the callback it passes in the video that was selected. This way it invokes a method in the App component with the video that was clicked on.
