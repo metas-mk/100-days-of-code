@@ -639,4 +639,4 @@ When communicating from parent to child, this is done via the props system. When
 - added an iframe tag in VideoDetails component
 - surrounded by div tag with `ui embed` style (SemanticUI will take care about the styling)
 - how to embed a youtube video?
-  - check out youtube. press share button on aany video. press embed. it shows an iframe example. you can see how the url is built with video identifier and video if in it. this is what is needed for the embedded video url that shall be built.
+  - Check out youtube. Press share button on any video. Press embed. It shows an iframe example. You can see how the url is built with video identifier and video of in it. This is what is needed for the embedded video url that shall be built.
