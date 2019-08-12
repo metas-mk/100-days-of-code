@@ -626,3 +626,10 @@ For the video player I want to select a VideoItem element. This shall show the s
 Create a new method in App component and pass a reference to that method down to VideoList. Further pass the reference down to VideoItem. Any time the user clicks a VideoItem we tell VideoItem to call the callback function `onVideoSelect`. When it calls the callback it passes in the video that was selected. This way it invokes a method in the App component with the video that was clicked on.
 
 When communicating from parent to child, this is done via the props system. When communicating from child to parent this is done via callback functions.
+
+#### Styling the VideoDetails component
+
+- retrieved the video description via youtube API and added some SemanticUI style to the VideoDetails component
+  - surrounding div tag with `ui segment`
+  - div tag header with `ui header`
+  - paragraph that takes the `{video.snippet.description}`
