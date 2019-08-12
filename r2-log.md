@@ -645,3 +645,6 @@ When communicating from parent to child, this is done via the props system. When
   - adding an alt prop to the img tage in VideoItem
   - adding a key prop to VideoList div tag
 - adding SemanticUI grid style for VideoDetail (11 columns) and VideoList (5 columns) component
+- defaulting the video selection in VideoDetail
+  - in onTermSubmit() so that the first video result is shown in VideoDetail
+  - componentDidMount() calls the onTermSubmit with default search term
