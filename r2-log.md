@@ -840,8 +840,20 @@ The environment can be stup in the project folder via `npm install --save redux 
 `With Redux`
 
 - App, SongList, SongDetail components passing very little information inbetween each other
-- Reducers
+- Reducers (only pieces of state in this App)
   - Song list reducer
   - Selected song reducer
-- Action creators
+- Action creators (only creator of state change)
   - select song
+
+#### How is Redux integrated into the App?
+
+- 2 new components, both created by React-Redux, we use instances of them and pass props to them
+  - Provider (has the store/ state as props) and is redered first (even before App). The Provider has the reference to store.
+  - Connect. The components that need access to the store will be wrapped into an instance of the Connect component. The connect component communicates with the Provider through the context system.
+- React-Redux project structure
+  - /src
+    - /actions (contains files related to action creators)
+    - /components (files related to components)
+    - /reducers (files related to reducers)
+    - index.js (sets up both the react and redux sides of the app)
