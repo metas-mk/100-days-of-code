@@ -786,3 +786,12 @@ const policies = (listOfPolicies = [], action) => {
   return listOfPolicies;
 };
 ```
+
+#### Resumee of Redux Cycle
+
+- to change the state of our app we call an Action Creator
+- the Action Creator produces an Action Object. The Action Object describes exactly how we want to change data in our Application,
+- the Action gets fed to dispatch function which in terms creates copies of the Action Object
+- the dispatch forwards the Action Object copies to each of the different Reducers
+- the Reducers process those Actions, modify and return the new data. The returned data gets formed into a new State
+- the State waits until we need to update again
