@@ -661,8 +661,18 @@ When communicating from parent to child, this is done via the props system. When
 
 #### Redux Cycle
 
-- Action Creator
-- Action
-- dispatch
-- Reducers
-- State
+- Action Creator (analogy to insurance company: customer dropping off the form)
+  - a function that will return a plain javascript object
+- Action (analogy to the form that is transmitted to the insurance company)
+  - the plain javascript object that was created by the Action creator
+  - has a type property (describes some change that we want to make in our data)
+  - has a payload property (describes some context about the change that we want to make)
+  - purpose to describe some change to the data of our apllication
+- dispatch (analogy to the form receiver at the insurance company that copies the form and forwards it to each department in the insurance company, together with selected relevant data)
+  - the dispatch function takes in an action and makes a copy of the action object and pass it off to a bunch of different places inside of our application
+- Reducers (analogy to each department in the insurance company)
+  - a reducer is a function that takes in a action and some amount of existing data
+  - it is going to process that action and make some change to that data and return it to be centralized in some other location
+- State (analogy to the compiled department data)
+  - a central repository of all information that has been created by our reducers
+  - with this our application can easily reach into the central repository to achieve needed infomration and does not have to ask every 'Department' to get the information
