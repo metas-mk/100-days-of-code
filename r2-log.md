@@ -648,3 +648,21 @@ When communicating from parent to child, this is done via the props system. When
 - defaulting the video selection in VideoDetail
   - in onTermSubmit() so that the first video result is shown in VideoDetail
   - componentDidMount() calls the onTermSubmit with default search term
+
+### R2D24 - August 13th, 2019
+
+#### Starting with Redux
+
+- What is Redux?
+  - State management library
+  - Makes creating complex applications easier
+  - Not required to create a React app!
+  - Not explicitly designed to work with React
+
+#### Redux Cycle
+
+- Action Creator
+- Action
+- dispatch
+- Reducers
+- State
