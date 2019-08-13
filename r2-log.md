@@ -718,7 +718,29 @@ const createClaim = (name, amountOfMoneyToCollect) => {
 
 `Example of dispatch`
 
-- no example because it is part of the Redux Library itself
+- is part of the Redux Library itself
+
+```js
+const { createStore, combineReducers } = Redux;
+
+const ourDepartments = combineReducers({
+  accounting: accounting,
+  claimsHistory: claimsHistory,
+  policies: policies
+});
+
+const store = createStore(ourDepartments);
+
+store.dispatch(createPolicy('Alex', 30));
+store.dispatch(createPolicy('Jim', 40));
+store.dispatch(createPolicy('Bob', 50));
+
+store.dispatch(createClaim('Alex', 120));
+
+store.dispatch(deletePolicy('Bob'));
+
+console.log(store.getState());
+```
 
 `Example of reducer`
 
