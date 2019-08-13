@@ -799,3 +799,5 @@ const policies = (listOfPolicies = [], action) => {
 - the dispatch forwards the Action Object copies to each of the different Reducers
 - the Reducers process those Actions, modify and return the new data. The returned data gets formed into a new State
 - the State waits until we need to update again
+
+The only way the state object can be updated is via the dispatch function in combination with Action creators and actions. There is now other way to reach into and update the state object under Redux.
