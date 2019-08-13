@@ -719,8 +719,10 @@ const createClaim = (name, amountOfMoneyToCollect) => {
 `Example of dispatch`
 
 - is part of the Redux Library itself
+- each dispatch runs a whole Redux cycle (see Resumee of Redux Cycle)
 
 ```js
+// wire up all our Reducer functions is done via combineReducers
 const { createStore, combineReducers } = Redux;
 
 const ourDepartments = combineReducers({
@@ -728,7 +730,9 @@ const ourDepartments = combineReducers({
   claimsHistory: claimsHistory,
   policies: policies
 });
+```
 
+```js
 const store = createStore(ourDepartments);
 
 store.dispatch(createPolicy('Alex', 30));
