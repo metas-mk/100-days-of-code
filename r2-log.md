@@ -810,4 +810,6 @@ The only way the state object can be updated is via the dispatch function in com
 - joined my local git repo with the new github repo via `git remote add origin <remote repository URL>`
 - the songs project will have 2 components
   - SongList
+    - shall display the list of song objects
   - SongDetail
+    - shall display the title and the length of the given songs
