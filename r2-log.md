@@ -676,3 +676,40 @@ When communicating from parent to child, this is done via the props system. When
 - State (analogy to the compiled department data)
   - a central repository of all information that has been created by our reducers
   - with this our application can easily reach into the central repository to achieve needed infomration and does not have to ask every 'Department' to get the information
+
+#### Redux Example in Codepen
+
+Example for action creators and actions
+
+```js
+// People dropping off a form (Action creator)
+const createPolicy = (name, amount) => {
+  return {
+    // Action (a form in our analogy)
+    type: 'CREATE_POLICY',
+    payload: {
+      name: name,
+      anmount: amount
+    }
+  };
+};
+
+const deletePolicy = name => {
+  return {
+    type: 'DELETE_POLICY',
+    payload: {
+      name: name
+    }
+  };
+};
+
+const createClaim = (name, amountOfMoneyToCollect) => {
+  return {
+    type: 'CREATE_CLAIM',
+    payload: {
+      name: name,
+      amountOfMoneyToCollect: amountOfMoneyToCollect
+    }
+  };
+};
+```
