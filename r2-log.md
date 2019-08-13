@@ -751,3 +751,16 @@ const accounting = (bagOfMoney = 100, action) => {
   return bagOfMoney;
 };
 ```
+
+```js
+// policies Department
+const policies = (listOfPolicies = [], action) => {
+  if (action.type === 'CREATE_POLICIY') {
+    return [...listOfPolicies, action.payload.name];
+  } else if (action.type === 'DELETE_POLICY') {
+    return listOfPolicies.filter(name => name !== action.payload.name);
+  }
+
+  return listOfPolicies;
+};
+```
