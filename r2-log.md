@@ -823,3 +823,16 @@ The only way the state object can be updated is via the dispatch function in com
 - Redux: Redux lib
 
 The environment can be stup in the project folder via `npm install --save redux react-redux`.
+
+#### Project Setup with/ without Redux
+
+`Without Redux`
+
+- App stores
+  - List of songs
+  - Selected song
+- App passes to Son List
+  - List of Songs
+  - onSongSelect callback
+- App passes to SongDetail
+  - selected song
