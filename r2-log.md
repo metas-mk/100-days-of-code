@@ -679,7 +679,7 @@ When communicating from parent to child, this is done via the props system. When
 
 #### Redux Example in Codepen
 
-Example for action creators and actions
+`Example for action creators and actions`
 
 - by convention the action type is written in upeprcase with underscore
 
@@ -716,6 +716,24 @@ const createClaim = (name, amountOfMoneyToCollect) => {
 };
 ```
 
-Example of dispatch
+`Example of dispatch`
 
 - no example because it is part of the Redux Library itself
+
+`Example of reducer`
+
+- always return a new dataset. never ever modify the old dataset and return that.
+
+```js
+// claimsHistory Department
+// oldListOfClaims default to empty array
+const claimsHistory = (oldListOfClaims = [], action) => {
+  if (action.type === 'CREATE_CLAIM') {
+    // we care about this action (form!)
+    return [...oldListOfClaims, action.payload];
+  }
+
+  // we don't care about this action (form!)
+  return oldListOfClaims;
+};
+```
