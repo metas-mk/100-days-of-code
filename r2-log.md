@@ -801,3 +801,13 @@ const policies = (listOfPolicies = [], action) => {
 - the State waits until we need to update again
 
 The only way the state object can be updated is via the dispatch function in combination with Action creators and actions. There is now other way to reach into and update the state object under Redux.
+
+#### New songs Project ReactJS & Redux
+
+- created a new project via `create-react-app songs`
+- deleted everything from the src folder
+- created a new public github repository https://github.com/metas-mk/songs
+- joined my local git repo with the new github repo via `git remote add origin <remote repository URL>`
+- the songs project will have 2 components
+  - SongList
+  - SongDetail
