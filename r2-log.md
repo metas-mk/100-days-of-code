@@ -808,8 +808,17 @@ The only way the state object can be updated is via the dispatch function in com
 - deleted everything from the src folder
 - created a new public github repository https://github.com/metas-mk/songs
 - joined my local git repo with the new github repo via `git remote add origin <remote repository URL>`
+- added SemanticUI to the project as stylesheet
 - the songs project will have 2 components
   - SongList
     - shall display the list of song objects
   - SongDetail
     - shall display the title and the length of the given songs
+
+#### How to setup Redux with React?
+
+- React: Same lib I have been using all the time
+- React-Redux: A bunch of helper functions to get React and Redux work nicely together.
+- Redux: Redux lib
+
+The environment can be stup in the project folder via `npm install --save redux react-redux`.
