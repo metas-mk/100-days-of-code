@@ -808,6 +808,7 @@ The only way the state object can be updated is via the dispatch function in com
 - deleted everything from the src folder
 - created a new public github repository https://github.com/metas-mk/songs
 - joined my local git repo with the new github repo via `git remote add origin <remote repository URL>`
+- created a new functional App component. Class based components are mostly only needed if state is needed. With the use of Redux the need of class based components will be reduced.
 - added SemanticUI to the project as stylesheet
 - the songs project will have 2 components
   - SongList
