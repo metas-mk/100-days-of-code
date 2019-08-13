@@ -681,6 +681,8 @@ When communicating from parent to child, this is done via the props system. When
 
 Example for action creators and actions
 
+- by convention the action type is written in upeprcase with underscore
+
 ```js
 // People dropping off a form (Action creator)
 const createPolicy = (name, amount) => {
@@ -713,3 +715,7 @@ const createClaim = (name, amountOfMoneyToCollect) => {
   };
 };
 ```
+
+Example of dispatch
+
+- no example because it is part of the Redux Library itself
