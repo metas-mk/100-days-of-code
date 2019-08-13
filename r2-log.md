@@ -836,3 +836,12 @@ The environment can be stup in the project folder via `npm install --save redux 
   - onSongSelect callback
 - App passes to SongDetail
   - selected song
+
+`With Redux`
+
+- App, SongList, SongDetail components passing very little information inbetween each other
+- Reducers
+  - Song list reducer
+  - Selected song reducer
+- Action creators
+  - select song
