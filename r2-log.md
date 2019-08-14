@@ -920,7 +920,7 @@ import { connect } from 'react-redux';
 export default connect(mapStateToProps)(SongList);
 ```
 
-3. Define `mapStateToProps` function which always has a first argument of `state` (Redux store) and always returns an object which is going to show up as props inside the component.
+3. Define `mapStateToProps` function which always has a first argument of `state` (Redux store) and always returns an object which is going to show up as props inside the component. This object has also a reference to the dispatch method.
 
 ```js
 // state is the complete state of our Redux store
