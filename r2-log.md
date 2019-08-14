@@ -857,3 +857,30 @@ The environment can be stup in the project folder via `npm install --save redux 
     - /components (files related to components)
     - /reducers (files related to reducers)
     - index.js (sets up both the react and redux sides of the app)
+
+### R2D25 - August 14th, 2019
+
+#### Adding Action creator and reducers to the songs app
+
+- New folder src/actions and new file index.js (webpack will identify index.ja as default when importing the folder)
+- New folder src/reducer and new file index.js with the reducers SongReducer and SelectedSongReducer. Further added the combineReducers() function in there
+
+`Wire up the Provider`
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import App from './components/App';
+import reducers from './reducers';
+
+ReactDOM.render(
+  <Provider store={createStore(reducers)}>
+    <App />
+  </Provider>,
+  document.querySelector('#root')
+);
+```
+
+Now all Components in our App can make use of the redux store with help of the Connect component.
