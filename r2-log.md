@@ -929,3 +929,14 @@ const mapStateToProps = state => {
   return { songs: state.songs };
 };
 ```
+
+4. Calling Action creators from components. The Action creator is added to the connect function as second argument. The connect function adds the ActionCreator to the props of the component. This is the only way Redux knows that the function is an Action creator that can be forwarded to dispatch.
+
+```js
+import { selectSong } from '../actions';
+...
+export default connect(
+  mapStateToProps,
+  { selectSong }
+)(SongList);
+```
