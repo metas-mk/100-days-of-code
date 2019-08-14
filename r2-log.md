@@ -892,3 +892,16 @@ export default connect()(SongList);
 ```
 
 The connect function returns a function. This function is then invoked with the property of SongList component.
+
+In component a new function is implemented. This function is the configuration for the connect function/ component. The function is added to connect as prop.
+
+```js
+// state is the complete state of our Redux store
+// mapStateToProps is naming convention
+const mapStateToProps = state => {
+  console.log(state);
+  return state;
+};
+
+export default connect(mapStateToProps)(SongList);
+```
