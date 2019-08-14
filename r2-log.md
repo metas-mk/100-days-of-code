@@ -883,4 +883,12 @@ ReactDOM.render(
 );
 ```
 
-Now all Components in our App can make use of the redux store with help of the Connect component.
+Now all Components in our App can make use of the redux store with help of the Connect function.
+
+In Component the connect function is called.
+
+```js
+export default connect()(SongList);
+```
+
+The connect function returns a function. This function is then invoked with the property of SongList component.
