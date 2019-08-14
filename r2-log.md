@@ -893,7 +893,7 @@ export default connect()(SongList);
 
 The connect function returns a function. This function is then invoked with the property of SongList component.
 
-In component a new function is implemented. This function is the configuration for the connect function/ component. The function is added to connect as prop.
+In component a new function `mapStateToProps` is implemented. This function is the configuration for the connect function/ component. The function is added to connect as prop.
 
 ```js
 // state is the complete state of our Redux store
@@ -904,4 +904,28 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps)(SongList);
+```
+
+#### IMPORTANT! Resumee of Redux in component integration
+
+1. Import connect from react-redux
+
+```js
+import { connect } from 'react-redux';
+```
+
+2. Call connect and pass in the component as second function call prop, here SOngList
+
+```js
+export default connect(mapStateToProps)(SongList);
+```
+
+3. Define `mapStateToProps` function which always has a first argument of `state` (Redux store) and always returns an object which is going to show up as props inside the component.
+
+```js
+// state is the complete state of our Redux store
+// mapStateToProps is naming convention
+const mapStateToProps = state => {
+  return { songs: state.songs };
+};
 ```
