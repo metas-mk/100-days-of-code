@@ -947,3 +947,25 @@ export default connect(
 
 - Debugged my song app. The selected song was not triggered after creating and wiring up the Action creator and reducer.
 - Found the Bug. Was a trivial typo in the `selectedSongReducer()`
+
+#### New SongDetail Component for the song App
+
+- created the new functional based component `SongDetail()`
+
+```js
+import React from 'react';
+import { connect } from 'react-redux';
+
+const SongDetail = props => {
+  console.log(props);
+  return <div>Song Detail!</div>;
+};
+
+const mapStateToProps = state => {
+  return { song: state.selectedSong };
+};
+
+export default connect(mapStateToProps)(SongDetail);
+```
+
+- imported the new component in `App.js` and created a JSX Tag for it to be rendered
