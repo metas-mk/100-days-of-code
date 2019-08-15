@@ -940,3 +940,10 @@ export default connect(
   { selectSong }
 )(SongList);
 ```
+
+### R2D26 - August 15th, 2019
+
+#### Debugging and bug fixing
+
+- Debugged my song app. The selected song was not triggered after creating and wiring up the Action creator and reducer.
+- Found the Bug. Was a trivial typo in the `selectedSongReducer()`
