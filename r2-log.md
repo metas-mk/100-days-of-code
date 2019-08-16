@@ -1011,13 +1011,16 @@ export default combineReducers({
 
 #### General Data loading with Redux
 
-- Component gets rendered onto the screen
-- Component's `componentDidMount` lifecycle method gets called
-  - for such cases a classbased component is needed to have access to the lifecycle methods
-- We call an action creator from `componentDidMount`
-- Action creator runs code to make an API request
-  - will use axios to do that
-- API responds with data
-- Action creator returns an `action` with the fetched data on the `payload` property
-- Some reducer sees the action, returns the data of the `payload`
-- Becasue we generated some new state object, redux/ react-redux cause our React app to be rerendered
+- Components are generalle responsible for fetching data they need by calling an action creator
+  - Component gets rendered onto the screen
+  - Component's `componentDidMount` lifecycle method gets called
+    - for such cases a classbased component is needed to have access to the lifecycle methods
+  - We call an action creator from `componentDidMount`
+- Action creators are responsible for making API requests (this is where Redux-Thunk comes into play)
+  - Action creator runs code to make an API request
+    - will use axios to do that
+  - API responds with data
+  - Action creator returns an `action` with the fetched data on the `payload` property
+- We get fetched data into a component by generating new state in our redux store, then getting that into our component through mapStateToProps
+  - Some reducer sees the action, returns the data of the `payload`
+  - Because we generated some new state object, redux/ react-redux cause our React app to be rerendered
