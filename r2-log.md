@@ -1013,6 +1013,11 @@ export default combineReducers({
 
 - Component gets rendered onto the screen
 - Component's `componentDidMount` lifecycle method gets called
+  - for such cases a classbased component is needed to have access to the lifecycle methods
 - We call an action creator from `componentDidMount`
 - Action creator runs code to make an API request
+  - will use axios to do that
 - API responds with data
+- Action creator returns an `action` with the fetched data on the `payload` property
+- Some reducer sees the action, returns the data of the `payload`
+- Becasue we generated some new state object, redux/ react-redux cause our React app to be rerendered
