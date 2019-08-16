@@ -988,7 +988,23 @@ export default connect(mapStateToProps)(SongDetail);
 - started a new ReactJS & Redux App `blog`
 - it will receive data from https://jsonplaceholder.typicode.com/ and show a list of blog posts with author information
 - installed a few additional libraries. new this time is `redux-thunk`
+  - redux: the Redux library
+  - react-redux: integration layer between React and Redux
+  - axios: helps to make network requests
+  - redux-thunk: middleware to make requests in a redux application
 
 ```
 npm install --save redux react-redux axios redux-thunk
+```
+
+#### Tip for initial redux dummy reducer
+
+If you quickly want to start a React-Redux project and don't want to start working on reducers yet, than you can just create a dummy reducer spo that your are not stalled by redux errors.
+
+```js
+import { combineReducers } from 'redux';
+
+export default combineReducers({
+  replaceMe: () => '666'
+});
 ```
