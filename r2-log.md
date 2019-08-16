@@ -1008,3 +1008,11 @@ export default combineReducers({
   replaceMe: () => '666'
 });
 ```
+
+#### General Data loading with Redux
+
+- Component gets rendered onto the screen
+- Component's `componentDidMount` lifecycle method gets called
+- We call an action creator from `componentDidMount`
+- Action creator runs code to make an API request
+- API responds with data
