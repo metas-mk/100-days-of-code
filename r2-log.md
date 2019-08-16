@@ -980,3 +980,15 @@ export default connect(mapStateToProps)(SongDetail);
 ```
 
 - imported the new component in `App.js` and created a JSX Tag for it to be rendered
+
+### R2D27 - August 16th, 2019
+
+#### Further Redux practice & Redux Thunk
+
+- started a new ReactJS & Redux App `blog`
+- it will receive data from https://jsonplaceholder.typicode.com/ and show a list of blog posts with author information
+- installed a few additional libraries. new this time is `redux-thunk`
+
+```
+npm install --save redux react-redux axios redux-thunk
+```
