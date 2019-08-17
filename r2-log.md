@@ -1075,3 +1075,20 @@ export default axios.create({
   baseURL: 'https://jsonplaceholder.typicode.com'
 });
 ```
+
+- Modified Action creator index.js for fetchPosts()
+  - This is Bad code and not allowed in Redux!!! Action creators must return plain objects.
+
+```js
+import jsonPlaceholder from '../apis/jsonPlaceholder';
+
+export const fetchPosts = async () => {
+  // Bad!!! cannot be done like this.
+  // Action creators must return plain objects
+  const response = await jsonPlaceholder.get('/posts');
+  return {
+    type: 'FETCH_POSTS',
+    payload: response
+  };
+};
+```
