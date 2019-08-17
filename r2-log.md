@@ -1018,9 +1018,14 @@ export default combineReducers({
   - We call an action creator from `componentDidMount`
 - Action creators are responsible for making API requests (this is where Redux-Thunk comes into play)
   - Action creator runs code to make an API request
+    - the Action creator initiates the API request, the request can be done via another class or function
     - will use axios to do that
   - API responds with data
   - Action creator returns an `action` with the fetched data on the `payload` property
 - We get fetched data into a component by generating new state in our redux store, then getting that into our component through mapStateToProps
   - Some reducer sees the action, returns the data of the `payload`
   - Because we generated some new state object, redux/ react-redux cause our React app to be rerendered
+
+### R2D28 - August 17th, 2019
+
+#### Further Redux practice & Redux Thunk
