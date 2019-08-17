@@ -1106,3 +1106,9 @@ export const fetchPosts = async () => {
   - The transpiles Action creator, because of async/ await returns via case 0 the request.
   - That's why we don't receive a plain object but the request `jsonPlaceholder.get('/posts')` instead
   - only in a further case 2 the expected plain JS Object is returned
+  - without async/ await the transpiled code works, but we don't receive data directly, we receive a promise to receive data some time in the future. It can happen that we don't have the data already at the time the reducer is run!
+    - Action creator called
+    - Action returned
+    - Action dispatched
+    - Reducer run
+    - All above happens in fractions of a ms. The data return from an async call takes much longer.
