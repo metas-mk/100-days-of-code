@@ -1029,3 +1029,39 @@ export default combineReducers({
 ### R2D28 - August 17th, 2019
 
 #### Further Redux practice & Redux Thunk
+
+- App.js main component (functional based)
+- First step fake reducer `src/reducers/index.js`
+
+```js
+import { combineReducers } from 'redux';
+
+export default combineReducers({
+  replaceMe: () => '666'
+});
+```
+
+- Action creator `src/actions/index.js`
+
+```js
+export const fetchPosts = () => {
+  return {
+    type: 'FETCH_POSTS'
+  };
+};
+```
+
+- PostList.js component (class based)
+  - import `connect from`react-redux`
+  - componentDidMount() Action creator call fetchPosts()
+
+```js
+componentDidMount() {
+  this.props.fetchPosts();
+}
+...
+export default connect(
+  null,
+  { fetchPosts }
+)(PostList);
+```
