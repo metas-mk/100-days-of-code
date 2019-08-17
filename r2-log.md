@@ -1100,3 +1100,9 @@ export const fetchPosts = async () => {
   - Action creators must return plain JS objects with a type property - fetchPosts is not.
   - By the time our action gets to a reducer, we won't have fetched our data!
 - But the code in Action cretor looks like a plain object! No. Trying the Action creator in https://babeljs.io shows to what the code is transpiledm and thats not a plain JS object. All because of the async/ await.
+- What happens behind the scenes?
+  - componentDidMount() calls this.props.fetchPosts().
+  - Then Redux dispatches the Action creator and invokes fetchPosts().
+  - The transpiles Action creator, because of async/ await returns via case 0 the request.
+  - That's why we don't receive a plain object but the request `jsonPlaceholder.get('/posts')` instead
+  - only in a further case 2 the expected plain JS Object is returned
