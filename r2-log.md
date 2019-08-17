@@ -1078,6 +1078,7 @@ export default axios.create({
 
 - Modified Action creator index.js for fetchPosts()
   - This is Bad code and not allowed in Redux!!! Action creators must return plain objects.
+  - Leads to error `Error: Actions must be plain objects. Use custom middleware for async actions.`
 
 ```js
 import jsonPlaceholder from '../apis/jsonPlaceholder';
