@@ -1093,3 +1093,9 @@ export const fetchPosts = async () => {
   };
 };
 ```
+
+#### Understanding Async Action Creators
+
+- What's wrong with 'fetchPosts'?
+  - Action creators must return plain JS objects with a type property - fetchPosts is not.
+  - By the time our action gets to a reducer, we won't have fetched our data!
