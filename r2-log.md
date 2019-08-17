@@ -1099,3 +1099,4 @@ export const fetchPosts = async () => {
 - What's wrong with 'fetchPosts'?
   - Action creators must return plain JS objects with a type property - fetchPosts is not.
   - By the time our action gets to a reducer, we won't have fetched our data!
+- But the code in Action cretor looks like a plain object! No. Trying the Action creator in https://babeljs.io shows to what the code is transpiledm and thats not a plain JS object. All because of the async/ await.
