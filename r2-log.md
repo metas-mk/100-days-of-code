@@ -1112,3 +1112,10 @@ export const fetchPosts = async () => {
     - Action dispatched
     - Reducer run
     - All above happens in fractions of a ms. The data return from an async call takes much longer.
+
+### R2D29 - August 18th, 2019
+
+#### Syncronous action vs. Asyncrononus action creator
+
+- Syncronous action creator: instantly returns an action object with data ready to be directly processed by reducers
+- Asyncronous action creator: takes some amount of time for it to get its data ready to be consumed
