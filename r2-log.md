@@ -1153,3 +1153,23 @@ Redux-Thunk source code can be found at https://github.com/reduxjs/redux-thunk
     - the function is invoked with dispatch and waited until the request is finished
     - after request is complete the dispatch action happens manually
     - a new action object is created and dispatched via the dispatch function
+
+#### How to hook up a middleware to Redux store (here Thunk)
+
+In root index.js just add a few imports and arguments to createStore()
+
+```js
+...
+import { createStore, applyMiddleware } from 'redux';
+...
+import thunk from 'redux-thunk';
+
+const store = createStore(reducers, applyMiddleware(thunk));
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.querySelector('#root')
+);
+```
