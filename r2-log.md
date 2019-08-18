@@ -1145,5 +1145,9 @@ export const fetchPosts = async () => {
 - Action creator is called and creates an object or a function
 - `Action` is passed into the dispatch function
 - dispatch sends the `Action` to the middleware Redux Thunk
-  - inside of Redux Think middleware it decides if plain JS object is receives or a function
+  - inside of Redux Think middleware it decides if plain JS object is received or a function
     - plain JS objects are passed along to all Reducers directly
+    - functions are invoked by Redux Thunk and dispatch and getState functions are added as arguments.
+    - the function is invoked with dispatch and waited until the request is finished
+    - after request is complete the dispatch action happens manually
+    - a new action object is created and dispatched via the dispatch function
