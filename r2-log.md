@@ -1118,4 +1118,4 @@ export const fetchPosts = async () => {
 #### Syncronous action vs. Asyncrononus action creator
 
 - Syncronous action creator: instantly returns an action object with data ready to be directly processed by reducers
-- Asyncronous action creator: takes some amount of time for it to get its data ready to be consumed
+- Asyncronous action creator: takes some amount of time for it to get its data ready to be consumed. Happens for example with network requests. To deal with thode in Redux we always have to use a middleware (e.g. Redux Thunk)
