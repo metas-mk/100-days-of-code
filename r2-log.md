@@ -1142,6 +1142,8 @@ export const fetchPosts = async () => {
 
 #### Partial Redux cycle with Redux Thunk
 
+Redux-Thunk source code can be found at https://github.com/reduxjs/redux-thunk
+
 - Action creator is called and creates an object or a function
 - `Action` is passed into the dispatch function
 - dispatch sends the `Action` to the middleware Redux Thunk
