@@ -1128,3 +1128,14 @@ export const fetchPosts = async () => {
 - middleware is a plain JS function that gets called with every action we dispatch
   - has the ability to stop or modify actions
   - middleware is most popular for dealing with async actions (e.g. Redux Thunk) but also others exist (e.g. middleware to console log dispatches)
+
+#### Details of Redux Thunk
+
+- Normal Redux Rules
+  - Action creators must return actions which are plain JS objects
+  - Actions must have a type property
+  - Actions optionally have a payload
+- Rules with Redux Thunk
+  - Action crators can return action objects or return functions
+  - when returning an action object it must have a type
+  - when returning an action object it can have a payload
