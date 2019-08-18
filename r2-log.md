@@ -1120,8 +1120,11 @@ export const fetchPosts = async () => {
 - Syncronous action creator: instantly returns an action object with data ready to be directly processed by reducers
 - Asyncronous action creator: takes some amount of time for it to get its data ready to be consumed. Happens for example with network requests. To deal with thode in Redux we always have to use a middleware (e.g. Redux Thunk)
 
-#### Where does middleware locate in the Redux cycle
+#### Where does middleware locate in the Redux cycle and what is it?
 
 - middleware is located between dispatch and reducers
   - dispatch forwards the actions to the middleware
   - middleware does whatever it shall do with the actions and sends it to the Reducers to be consumed
+- middleware is a plain JS function that gets called with every action we dispatch
+  - has the ability to stop or modify actions
+  - middleware is most popular for dealing with async actions (e.g. Redux Thunk) but also others exist (e.g. middleware to console log dispatches)
