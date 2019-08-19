@@ -1220,3 +1220,16 @@ let hasChanged = false
 
 Lodash is a nice library that provides a lot of functions that help in JavaScript Development. It can be found here: https://lodash.com/docs/4.17.15
 Just open the console on documentation page and you can try it out directly.
+
+#### Fetching user data for each post
+
+The user data can be fetched via `/users` endpoint. Routes are provided to only fetch user data for a given id.
+
+What shall be done in the app?
+
+- Fetch posts
+- Show posts in PostList
+- Each element in PostList shows the UserHeader
+- User Header is given ID of user to show
+- Each UserHeader attempts to fetch its user
+- Show users in each UserHeader
