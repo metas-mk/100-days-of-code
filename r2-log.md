@@ -1178,7 +1178,7 @@ ReactDOM.render(
 
 #### Rules of Reducers
 
-- a reducer must return any value besides undefined
+- a reducer must return any value besides `undefined`. returning `undefined` leads to an error message.
 - are pure
 - produces `state`, or data to be used inside of the app
 - must not reach outside itself in order to decide what value to return
