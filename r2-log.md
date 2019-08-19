@@ -1189,3 +1189,4 @@ ReactDOM.render(
   - must not reach outside itself in order to decide what value to return. it's only using the previos state and action object to produce the return value.
 - shall not manipulate its props/ argument `state`
   - is a convention. Redux will not throw any errors if one does.
+  - but Redux will not let React know that a change was done and therfor the components will not be rerendered
