@@ -1190,3 +1190,28 @@ ReactDOM.render(
 - shall not manipulate its props/ argument `state`
   - is a convention. Redux will not throw any errors if one does.
   - but Redux will not let React know that a change was done and therfor the components will not be rerendered
+
+Check out combineReducers Code from the Redux project https://github.com/reduxjs/redux/blob/master/src/combineReducers.js
+
+```js
+...
+let hasChanged = false
+    const nextState = {}
+    for (let i = 0; i < finalReducerKeys.length; i++) {
+      const key = finalReducerKeys[i]
+      const reducer = finalReducers[key]
+      const previousStateForKey = state[key]
+      const nextStateForKey = reducer(previousStateForKey, action)
+      if (typeof nextStateForKey === 'undefined') {
+        const errorMessage = getUndefinedStateErrorMessage(key, action)
+        throw new Error(errorMessage)
+      }
+      nextState[key] = nextStateForKey
+      hasChanged = hasChanged || nextStateForKey !== previousStateForKey
+    }
+    hasChanged =
+      hasChanged || finalReducerKeys.length !== Object.keys(state).length
+    return hasChanged ? nextState : state
+  }
+...
+```
