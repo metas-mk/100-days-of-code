@@ -1215,3 +1215,7 @@ let hasChanged = false
   }
 ...
 ```
+
+#### Lodash - a JavaScript utility library
+
+Lodash is a great library that provides a lot of functions that help in JavaScript Development. It can be found here: https://lodash.com/docs/4.17.15
