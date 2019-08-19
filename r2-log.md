@@ -1188,3 +1188,4 @@ ReactDOM.render(
     - each other time the reducer runs it receives the current state as first argument and a changed action object.
   - must not reach outside itself in order to decide what value to return. it's only using the previos state and action object to produce the return value.
 - shall not manipulate its props/ argument `state`
+  - is a convention. Redux will not throw any errors if one does.
