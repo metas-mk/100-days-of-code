@@ -1180,6 +1180,11 @@ ReactDOM.render(
 
 - a reducer must return any value besides `undefined`. returning `undefined` leads to an error message.
 - are pure
-- produces `state`, or data to be used inside of the app
+- produces `state`, or data to be used inside of the app by using the initial data received from state and the action that has been dispatched
+  - when starting the Redux application each reducer is automatically run one time to produce the default state value
+  - it receives two values.
+    - undefined (is then initialized by the reducer default argument value)
+    - some action object
+  - each other time the reducer runs it receives the current state as first argument and a changed action object.
 - must not reach outside itself in order to decide what value to return
 - shall not manipulate its props/ argument `state`
