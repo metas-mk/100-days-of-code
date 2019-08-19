@@ -1173,3 +1173,13 @@ ReactDOM.render(
   document.querySelector('#root')
 );
 ```
+
+### R2D30 - August 19th, 2019
+
+#### Rules of Reducers
+
+- a reducer must return any value besides undefined
+- are pure
+- produces `state`, or data to be used inside of the app
+- must not reach outside itself in order to decide what value to return
+- shall not manipulate its props/ argument `state`
