@@ -1243,3 +1243,16 @@ What shall be done in the app?
 - Opened a development branch in the repository and installed JSDoc locally `npm install --save-dev jsdoc`
 - Created the first docs with `.\node_modules\.bin\jsdoc .\src\ -r`
 - The result can be found in the default folder `.\out`
+
+### R2D32 - August 22nd, 2019
+
+#### JSDoc
+
+- Adding a dependancy to `package.json`
+
+```js
+...
+"scripts": {
+  "docs": "./node_modules/.bin/jsdoc "
+}
+```
