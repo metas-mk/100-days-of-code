@@ -1288,3 +1288,12 @@ _jsdoc.json_
   }
 }
 ```
+
+- Added an example Tutorial section to the generated JSDoc
+  - New folder `Tutorials` with an example file `example-tutorial.md`. Added an option to the `jsdoc.json`
+
+```js
+  "opts": {
+...
+    "tutorials": "./tutorials"
+```
