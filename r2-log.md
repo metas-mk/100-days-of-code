@@ -1256,3 +1256,35 @@ What shall be done in the app?
   "docs": "./node_modules/.bin/jsdoc "
 }
 ```
+
+- Adds a configuration file for JSDoc and adding a parm to the dependancy to use the config file
+
+_package.json_
+
+```js
+"scripts": {
+    ...
+    "docs": "./node_modules/.bin/jsdoc -c jsdoc.json",
+    ...
+  }
+```
+
+_jsdoc.json_
+
+```js
+{
+  "source": {
+    "include": ["./src"],
+    "includePattern": ".js$",
+    "excludePattern": "(node_modules/|docs)"
+  },
+  "plugins": ["plugins/markdown"],
+  "opts": {
+    "encoding": "utf8",
+    "readme": "./readme.md",
+    "destination": "docs/",
+    "recurse": true,
+    "verbose": true
+  }
+}
+```
