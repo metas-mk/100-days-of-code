@@ -1233,3 +1233,13 @@ What shall be done in the app?
 - User Header is given ID of user to show
 - Each UserHeader attempts to fetch its user
 - Show users in each UserHeader
+
+### R2D31 - August 21st, 2019
+
+#### JSDoc
+
+- Reading about how to get started with [JSDoc](https://jsdoc.app/)
+- Evalutating if it can be used for the open source ReactJS project [metasfresh](https://github.com/metasfresh/metasfresh-webui-frontend)
+- Opened a development branch in the repository and installed JSDoc locally `npm install --save-dev jsdoc`
+- Created the first docs with `.\node_modules\.bin\jsdoc .\src\ -r`
+- The result can be found in the default folder `.\out`
