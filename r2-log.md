@@ -1297,3 +1297,34 @@ _jsdoc.json_
 ...
     "tutorials": "./tutorials"
 ```
+
+- Per default the tutorial title is shown with the filename. To change that you can create a `totorial.json` file in the tutorials folder and do a filename title assignment.
+
+```js
+{
+  "example-tutorial": {
+    "title": "Example Tutorial"
+  }
+}
+```
+
+- Installed the JSDoc theme `better-docs` locally and saved dependancy `npm install --save-dev better-docs`
+  - After install added the template option to jsdoc.json
+
+```js
+  "opts": {
+    ...,
+    "template": "./node_modules/better-docs/"
+  }
+```
+
+- Added category support to JSDocs. Now the `@category` annotation can be used to add the comment into a category.
+
+```js
+{
+  ...,
+  "plugins": ["plugins/markdown", "node_modules/better-docs/category"],
+  ...
+  }
+}
+```
