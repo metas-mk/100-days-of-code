@@ -1328,3 +1328,9 @@ _jsdoc.json_
   }
 }
 ```
+
+### R2D33 - August 23rd, 2019
+
+#### JSDoc
+
+- I dived into the sourcecode of [metasfresh-webui-frontend](https://github.com/metasfresh/metasfresh-webui-frontend) and started documenting the component structure of the project.
