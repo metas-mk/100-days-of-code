@@ -1334,3 +1334,18 @@ _jsdoc.json_
 #### JSDoc
 
 - I dived into the sourcecode of [metasfresh-webui-frontend](https://github.com/metasfresh/metasfresh-webui-frontend) and started documenting the component structure of the project.
+
+- Found out how to document functional React components and their props. Here an example:
+
+```js
+/**
+ * Separator for element groups
+ * @param {object} props Component props
+ * @param {string} props.title Separator title
+ * @param {bool} props.collapsible Separator collapsible
+ * @param {bool} props.sectionCollapsed Separator collapsed
+ * @param {*} props.idx Index
+ * @param {function} props.onClick Callback function for onClick Handler
+ * @param {*} props.tabId Tab ID
+ */
+```
