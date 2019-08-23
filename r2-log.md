@@ -1257,7 +1257,7 @@ What shall be done in the app?
 }
 ```
 
-- Adds a configuration file for JSDoc and adding a parm to the dependancy to use the config file
+- Adds a configuration file for JSDoc and adding a parm to the dependancy to use the config file. The document creation can now be done via `npm run docs`.
 
 _package.json_
 
