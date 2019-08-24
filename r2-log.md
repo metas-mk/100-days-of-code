@@ -1365,3 +1365,7 @@ _jsdoc.json_
 - In UserHeader component created the mapStateToProps()
 
 - Added the UserHeader into PostList component.
+
+- Refactored mapStateToProps. Extracted logic from component to mapStateToProps method. The method takes another argument `ownProps` which is a reference to the component props.
+
+- Any computation that shall be done on the Redux state, shall be done in the mapStateToProps method instead of component itself.
