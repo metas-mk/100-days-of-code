@@ -1359,3 +1359,9 @@ _jsdoc.json_
 #### Further ReactJS/ Redux learning
 
 - Working on my blog coding challenge project. Created a new action creator `fetchUser()`. This one fetches a user object for a given user id prop from jsonPlaceholder.
+
+- Created a new reducer called usersReducer. Wired the new reducer up in `reducers/index.js` `combineReducers`.
+
+- In UserHeader component created the mapStateToProps()
+
+- Added the UserHeader into PostList component.
