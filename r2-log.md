@@ -1349,3 +1349,9 @@ _jsdoc.json_
  * @param {*} props.tabId Tab ID
  */
 ```
+
+### R2D34 - August 24th, 2019
+
+#### JSDoc
+
+- Further examining I the ReactJS code of [metasfresh-webui-frontend](https://github.com/metasfresh/metasfresh-webui-frontend) and documenting the component structure of the project. Event though I'm not understanding everything in detail directly, documenting is a great way to learn step-by-step how the application works and helps other new peopls to the project to have a better prepared ressource to learn.
