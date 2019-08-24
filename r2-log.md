@@ -1355,3 +1355,7 @@ _jsdoc.json_
 #### JSDoc
 
 - Further examining I the ReactJS code of [metasfresh-webui-frontend](https://github.com/metasfresh/metasfresh-webui-frontend) and documenting the component structure of the project. Event though I'm not understanding everything in detail directly, documenting is a great way to learn step-by-step how the application works and helps other new peopls to the project to have a better prepared ressource to learn.
+
+#### Further ReactJS/ Redux learning
+
+- Working on my blog coding challenge project. Created a new action creator `fetchUser()`. This one fetches a user object for a given user id prop from jsonPlaceholder.
