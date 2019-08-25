@@ -1375,3 +1375,29 @@ _jsdoc.json_
 #### Blog Project, ReactJS/ Redux learning
 
 After finishing the practice blog project it happens that each Instance of UserHeader makes a request to the API to receive the user data. This is not efficient. If a user is already know, the user data shall be reused and the additional requests shall be avoided.
+
+- trying lodash to solve this, using the `memoize()` function. Trying this example in the browser console at https://lodash.com/docs/4.17.15#memoize
+
+```js
+// example
+function getUser(id) {
+  fetch(id);
+  return 'Made a request!';
+}
+```
+
+```js
+getUser(5);
+```
+
+The console shows a log for each request made anf in the network tab (XHR) each time a request is shown. Now adding the lodash function `memoize()`
+
+```js
+const memoizedGetUser = _.memoize(getUser);
+```
+
+```js
+memoizeGetUser(5);
+```
+
+Once the `memoizeGetUser()` is run with a given ID it does not create a request for the same ID again.
