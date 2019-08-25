@@ -1430,3 +1430,14 @@ The new apporach will be like this:
   - Find all unique userId's from the list of posts
   - Iterate over the unique userId's
   - Call `fetchUser` with each userId
+
+Refactored action creator. Still using a bit of lodash.
+
+```js
+export const fetchPostsAndUsers = () => async (dispatch, getState) => {
+  await dispatch(fetchPosts());
+
+  const userIds = _.uniq(_.map(getState().posts, 'userId'));
+  userIds.forEach(id => dispatch(fetchUser(id)));
+};
+```
