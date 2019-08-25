@@ -1402,4 +1402,20 @@ memoizeGetUser(5);
 
 Once the `memoizeGetUser()` is run with a given ID it does not create a request for the same ID again. The original function is not invoked anymore. It returns what was received previously with the identical set of arguments.
 
-Installed lodash with `npm install --save lodash`.
+- Installed lodash with `npm install --save lodash`.
+
+- refactored the action creator for fetchUser
+
+```js
+import _ from 'lodash';
+...
+export const fetchUser = id => dispatch => _fetchUser(id, dispatch);
+
+// private function for memoizing action creator
+const _fetchUser = _.memoize(async (id, dispatch) => {
+  const response = await jsonPlaceholder.get(`/users/${id}`);
+
+  dispatch({ type: 'FETCH_USER', payload: response.data });
+});
+
+```
