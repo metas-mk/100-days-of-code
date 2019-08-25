@@ -1421,3 +1421,12 @@ const _fetchUser = _.memoize(async (id, dispatch) => {
 ```
 
 The downside of this approach is that each User can only be fetched one time during a session. It can happen that User data changes an one will want to refetch the user data. This needs another solution.
+
+The new apporach will be like this:
+
+- New action creator fetchPostsAndUsers()
+  - Call `fetchPosts`
+  - Get a list of posts
+  - Find all unique userId's from the list of posts
+  - Iterate over the unique userId's
+  - Call `fetchUser` with each userId
