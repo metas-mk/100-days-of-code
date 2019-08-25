@@ -1369,3 +1369,9 @@ _jsdoc.json_
 - Refactored mapStateToProps. Extracted logic from component to mapStateToProps method. The method takes another argument `ownProps` which is a reference to the component props.
 
 - Any computation that shall be done on the Redux state, shall be done in the mapStateToProps method instead of component itself.
+
+### R2D35 - August 25th, 2019
+
+#### Blog Project, ReactJS/ Redux learning
+
+After finishing the practice blog project it happens that each Instance of UserHeader makes a request to the API to receive the user data. This is not efficient. If a user is already know, the user data shall be reused and the additional requests shall be avoided.
