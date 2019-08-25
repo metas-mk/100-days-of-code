@@ -1400,4 +1400,6 @@ const memoizedGetUser = _.memoize(getUser);
 memoizeGetUser(5);
 ```
 
-Once the `memoizeGetUser()` is run with a given ID it does not create a request for the same ID again.
+Once the `memoizeGetUser()` is run with a given ID it does not create a request for the same ID again. The original function is not invoked anymore. It returns what was received previously with the identical set of arguments.
+
+Installed lodash with `npm install --save lodash`.
