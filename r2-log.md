@@ -1441,3 +1441,11 @@ export const fetchPostsAndUsers = () => async (dispatch, getState) => {
   userIds.forEach(id => dispatch(fetchUser(id)));
 };
 ```
+
+### R2D36 - August 26th, 2019
+
+#### Documenting metasfresh fronent
+
+- Reading into the metasfresh opensource erp frontend code based on ReactJS/ Redux
+- Documenting Components with JSDoc
+
