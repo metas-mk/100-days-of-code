@@ -1454,7 +1454,7 @@ export const fetchPostsAndUsers = () => async (dispatch, getState) => {
 #### ReactJS props validation
 
 - Reading about props validation. I'm thinking about introducing prop-types to each component in metasfresh frontent project to be able to know all props and their format via PropTypes. PropTypes checking is only done in development mode. For performance reasons the check is not triggered in production environment.
--
+  -The official documentation about prop-types can be found here https://github.com/facebook/prop-types/blob/master/README.md
 - The PropTypes can be installed as follows `npm install prop-types --save`
 - PropTypes can be imported into project files as follows
 
@@ -1489,3 +1489,15 @@ ComponentName.propTypes = {
 
 - Proceeding with the developer documentation of the metasfresh-webui-frontend project.
 - Creating PropTypes for component Modal.js
+
+#### Wrap up of Redux Thunk practice project
+
+- imported Redux Thunk
+- wired up Thunk to Redux store via applyMiddleware(thunk) which is a function from the Redux library itself
+- passed the result of that as 2nd argument to createStore()
+- very time we apply an action it is sent to Thunk via Middleware
+- after that the action will be sent to all of our action reducers
+- the rules of our action creators changed so we can now not only return an object but also a function (outer function that returns an inner function)
+- action creator that calls other action creators and then manually dispatches to reducer
+- reducers with common switch syntax
+- reducers always have to return a new array/ object so that Redux recognizes that we made a change to data and our component can be rerendered
