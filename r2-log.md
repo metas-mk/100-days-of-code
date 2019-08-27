@@ -1501,3 +1501,11 @@ ComponentName.propTypes = {
 - action creator that calls other action creators and then manually dispatches to reducer
 - reducers with common switch syntax
 - reducers always have to return a new array/ object so that Redux recognizes that we made a change to data and our component can be rerendered
+
+#### New practice project similar to twitch.tv
+
+- Open Boardcaster Software (OBS) streaming on PC
+- Stream the desktop via Real time messaging protokoll (RTMP) server
+- RTMP server broadcasts the feed to multiple viewers (viewer browser)
+- web server that has a list of currently streamed videos
+- selecting a video makes a request to RTMP server to receive the stream
