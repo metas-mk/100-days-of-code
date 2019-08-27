@@ -1444,7 +1444,7 @@ export const fetchPostsAndUsers = () => async (dispatch, getState) => {
 
 ### R2D36 - August 26th, 2019
 
-#### Documenting metasfresh fronent
+#### Documenting metasfresh frontend
 
 - Reading into the metasfresh opensource erp frontend code based on ReactJS/ Redux
 - Documenting Components with JSDoc
@@ -1484,3 +1484,8 @@ ComponentName.propTypes = {
   enumProp: PropTypes.oneOf([true, false, 0, 'Unnown'])
 };
 ```
+
+#### Documenting metasfresh frontend
+
+- Proceeding with the developer documentation of the metasfresh-webui-frontend project.
+- Creating PropTypes for component Modal.js
