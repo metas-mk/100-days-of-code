@@ -1453,7 +1453,8 @@ export const fetchPostsAndUsers = () => async (dispatch, getState) => {
 
 #### ReactJS props validation
 
-- Reading about props validation. I'm thinking about introducing prop-types to each component in metasfresh frontent project to be able to know all props and their format via PropTypes.
+- Reading about props validation. I'm thinking about introducing prop-types to each component in metasfresh frontent project to be able to know all props and their format via PropTypes. PropTypes checking is only done in development mode. For performance reasons the check is not triggered in production environment.
+-
 - The PropTypes can be installed as follows `npm install prop-types --save`
 - PropTypes can be imported into project files as follows
 
