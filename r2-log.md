@@ -1449,3 +1449,37 @@ export const fetchPostsAndUsers = () => async (dispatch, getState) => {
 - Reading into the metasfresh opensource erp frontend code based on ReactJS/ Redux
 - Documenting Components with JSDoc
 
+### R2D37 - August 27th, 2019
+
+#### ReactJS props validation
+
+- Reading about props validation. I'm thinking about introducing prop-types to each component in metasfresh frontent project to be able to know all props and their format via PropTypes.
+- The PropTypes can be installed as follows `npm install prop-types --save`
+- PropTypes can be imported into project files as follows
+
+```js
+import PropTypes from 'prop-types';
+```
+
+Here an example how to uses the PropTypes in your component:
+
+```js
+ComponentName.propTypes = {
+  // basic types
+  anyProp: PropTypes.any,
+  booleanProp: PropTypes.boolean,
+  numberProp: PropTypes.number,
+  stringProp: PropTypes.string,
+  functionProp: PropTypes.function,
+  symbolProp: PropTypes.symbol,
+  arrayProp: PropTypes.array,
+  objectProp: PropTypes.object,
+  // renderable types
+  nodeProp: PropTypes.node,
+  elementProp: PropTypes.element,
+  // instance types
+  personProp: PropTypes.instanceOf(Person)
+  // multiple types
+  enumProp: PropTypes.oneOf([true, false, 0, 'Unnown'])
+};
+```
