@@ -1509,3 +1509,10 @@ ComponentName.propTypes = {
 - RTMP server broadcasts the feed to multiple viewers (viewer browser)
 - web server that has a list of currently streamed videos
 - selecting a video makes a request to RTMP server to receive the stream
+
+### R2D38 - August 28th, 2019
+
+#### metasfresh developer documentation
+
+- Proceeding with the developer documentation of the metasfresh-webui-frontend project.
+- Creating PropTypes for different components
