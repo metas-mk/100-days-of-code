@@ -1516,3 +1516,21 @@ ComponentName.propTypes = {
 
 - Proceeding with the developer documentation of the metasfresh-webui-frontend project.
 - Creating PropTypes for different components
+
+#### Mockups for twitch.tv practice project
+
+- Different pages/ screen. URL determines which content will be shown. Different components shown per page
+- Login/ Logout auth system via google login
+- Main Landing page with list of all different streams available, each shown with stream title and stream description underneath
+- If user clicks a stream the user is taken to the video page and the stream is started
+- User is not logged in
+  - User can view a list of all streams/ channels
+  - User can view video for a single stream
+- User is logged in
+  - User can create a new stream/ channel
+  - User can edit a stream/ channel they have created
+  - User can delete a stream/ channel they have created
+- Once logged in, the main page is shown.
+  - The title and description of streams can be edited.
+  - Also deleting is possible.
+  - Further new streams can be created.
