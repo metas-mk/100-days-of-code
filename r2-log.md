@@ -1534,3 +1534,41 @@ ComponentName.propTypes = {
   - The title and description of streams can be edited.
   - Also deleting is possible.
   - Further new streams can be created.
+
+#### React Router time
+
+- installed React Router to my project with `npm install --save react-router-dom`
+  - react-router-dom provides the navigation for dom based/ browser based application
+  - react-router is the core navigation library (don't install this manually)
+  - react-router-native is the navigation for react-native apps
+  - react-router-redux is the binding between Redux and React Router (not needed)
+- Import the needed components from 'react-router-dom'
+
+```js
+import { BrowserRouter, Route } from react-router-dom;
+```
+
+- add the routes to the components like this
+
+```js
+...
+const PageOne = () => {
+  return <div>PageOne</div>;
+};
+
+const PageTwo = () => {
+  return <div>PageTwo</div>;
+};
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <div>
+        <Route path="/" exact component={PageOne} />
+        <Route path="/pagetwo" exact component={PageTwo} />
+      </div>
+    </BrowserRouter>
+  );
+};
+...
+```
