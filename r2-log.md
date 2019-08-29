@@ -1572,3 +1572,35 @@ const App = () => {
 };
 ...
 ```
+
+### R2D39 - August 29th, 2019
+
+#### React Router time
+
+- React Router only considers patterns after domainname and ports definition in the url (e.g. `metasfresh.com/window/143` only `/window/143` is checked by React router)
+- the pattern is defined in the path prop for Route component
+- inside a React route application one can have multiple route components that match a given url and all show themselves
+  - this is a wanted functionality for nested components 
+- the keyword `exact` Route only considers exactly given path properties, so for `path="/" exact` only paths with only "/" is matched. If not using exact also paths like "/12345" will be matched. The function called is
+
+```js
+extractedPath.contains(path);
+```
+
+- with `exact` set, the rule is changed to
+
+```js
+extractedPath === path;
+```
+
+- How does a prop get interpreted which only has a keyword in JSX?
+
+```js
+<Route path="/" exact component={PageOne} />
+```
+
+is identical to
+
+```js
+<Route path="/" exact={true} component={PageOne} />
+```
