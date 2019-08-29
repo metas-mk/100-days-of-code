@@ -1604,3 +1604,11 @@ is identical to
 ```js
 <Route path="/" exact={true} component={PageOne} />
 ```
+
+- Don't use anchor tags to navigate in React components. The anchor tags forces the browser to reload the whole application. Use Link component instead.
+
+```js
+<Link to="/">Navigate to PageOne</Link>
+```
+
+- with Link the React Router prevents the browser from navigating to the new page and fetching the new index.html file. The URL still changes. The History still sees the updated URL. It takes the URL and sends it to BrowserRouter which communicates the URL tou Route components. Route components rerender to show the new set of components.
