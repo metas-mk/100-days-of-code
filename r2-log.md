@@ -1580,7 +1580,7 @@ const App = () => {
 - React Router only considers patterns after domainname and ports definition in the url (e.g. `metasfresh.com/window/143` only `/window/143` is checked by React router)
 - the pattern is defined in the path prop for Route component
 - inside a React route application one can have multiple route components that match a given url and all show themselves
-  - this is a wanted functionality for nested components 
+  - this is a wanted functionality for nested components
 - the keyword `exact` Route only considers exactly given path properties, so for `path="/" exact` only paths with only "/" is matched. If not using exact also paths like "/12345" will be matched. The function called is
 
 ```js
@@ -1614,3 +1614,14 @@ is identical to
 - with Link the React Router prevents the browser from navigating to the new page and fetching the new index.html file. The URL still changes. The History still sees the updated URL. It takes the URL and sends it to BrowserRouter which communicates the URL tou Route components. Route components rerender to show the new set of components.
 
 - This is the nature of a Single Page Application (SPA)
+
+### R2D40 - August 30th, 2019
+
+#### Different React Router types
+
+- Browser Router
+  - uses everything after the top level domain or port as the `path`
+- Hash Router
+  - uses everything after the # as the `path
+- Memory Router
+  - does not use the URL to track the navigation
