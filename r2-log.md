@@ -1702,8 +1702,11 @@ Infos about Google OAuth can be found here https://developers.google.com/identit
   ```js
   class GoogleAuth extends React.Component {
   componentDidMount() {
+    // wire Google API to our project
+    // Loaded additional code `client:auth2
     window.gapi.load('client:auth2', () => {
       window.gapi.client.init({
+        // initialize the client
         clientId:
           '193501106635-772gvf9343f4ltm8idakop16ntstvpae.apps.googleusercontent.com',
         scope: 'email'
@@ -1711,4 +1714,13 @@ Infos about Google OAuth can be found here https://developers.google.com/identit
     });
   }
   ...
+  ```
+
+  - googled for `gapi documentation` and checked out __Authentication__ 
+  - tried the API via browser console and already initialized client (see above).
+  
+  ```js
+  const auth = gapi.auth2.getAuthInstance();
+  auth.signIn(); // Google auth Popup opens
+  auth.isSignedIn.get(); // Is the user signed in?
   ```
