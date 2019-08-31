@@ -1662,12 +1662,19 @@ Infos about Google OAuth can be found here https://developers.google.com/identit
 
 #### OAuth for Servers
 
-- results in a `token` that a server can use to make requests on behalf of the user
-- usually used when we have an app that needs to access user data when they are not logged in
+- results in a `token` that a server can use to make requests on behalf of the user (same as for browser)
+- used when we have an application that needs to access user data when they are __not__ logged in (e.g. application that checks emails also if user is not logged in)
 - difficult to setup because we need to store a lot of info about the user
 
 ## OAuth for JavaScript browser application
 
 - results in a `token` that a browser app can use to make requests on behalf of the user
-- usually used when we have an app that only needs to access user data while they are logged in
+- usually used when we have an app that only needs to access user data while they __are__ logged in
 - very easy to set up with Google's JavaScript library to automate flow
+- my application shall have the following authentication flow
+  - user clicks `Login with Google` button in browser (click event handler)
+  - code calls google JS library to start the authentication via OAuth
+  - the Google JS lib make an authentication request to Google platform
+  - Google then shows a popup confirmation screen which the user shall accept. The popup screen then closes.
+  - Google JS library invokes a callback function in our ReactJS/ Redux application. It is provided with an authorization token ans profile information for the given user. This is identifying the user and prove that the user is sucessfully logged in.
+  - Logout is handled in a similar way via callback.
