@@ -1640,3 +1640,22 @@ is identical to
 
 - Added Header component to App component because Link component shall be a child of a Router.
   - the header component is still shown on every page because it's not wired up to a path
+- The App shall have an authentication. A login button `Login with Google` shall appear on the top right in the header
+
+#### Email/ Password Authentication
+
+- store a record in a database with the user's email and password
+- when the user tries to login we compare the email and password with what is stored in the database
+- the user is logged in when a valid email-password combination is entered
+
+#### OAuth Authentication
+
+- user authenticates with an outside provider like GitHub, LinkedIn, Google or Facebook
+- user authorizes the app to access their informaiton at that provider
+- the outstide provider provides different information about the user
+- we are trusting the outside provider to correctly handle the identification of a user
+- OAuth can be used for
+  - user identification in our application
+  - making actions on behalf of the user through our application
+
+Infos about Google OAuth can be found here https://developers.google.com/identity/protocols/googlescopes and here https://developers.google.com/identity/protocols/OAuth2
