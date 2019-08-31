@@ -1659,3 +1659,15 @@ is identical to
   - making actions on behalf of the user through our application
 
 Infos about Google OAuth can be found here https://developers.google.com/identity/protocols/googlescopes and here https://developers.google.com/identity/protocols/OAuth2
+
+#### OAuth for Servers
+
+- results in a `token` that a server can use to make requests on behalf of the user
+- usually used when we have an app that needs to access user data when they are not logged in
+- difficult to setup because we need to store a lot of info about the user
+
+## OAuth for JavaScript browser application
+
+- results in a `token` that a browser app can use to make requests on behalf of the user
+- usually used when we have an app that only needs to access user data while they are logged in
+- very easy to set up with Google's JavaScript library to automate flow
