@@ -1678,3 +1678,13 @@ Infos about Google OAuth can be found here https://developers.google.com/identit
   - Google then shows a popup confirmation screen which the user shall accept. The popup screen then closes.
   - Google JS library invokes a callback function in our ReactJS/ Redux application. It is provided with an authorization token ans profile information for the given user. This is identifying the user and prove that the user is sucessfully logged in.
   - Logout is handled in a similar way via callback.
+
+  #### How to setup the project for OAuth with Google?
+  - Open console.developers.google.com and create a new project
+    - wait for the project to be created and then select the project
+    - create new credentials for the project
+    - create OAuth client ID
+    - set authorized JS origin to http://localhost:3000 for practice project
+  - set up an OAuth confirmation screen and generate an OAuth client ID
+  - install Google's API library, initialize it with the OAuth client ID
+  - make sure the lib gets called any time the user clicks on the `Login with Google` button
