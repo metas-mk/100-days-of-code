@@ -1701,18 +1701,26 @@ Infos about Google OAuth can be found here https://developers.google.com/identit
   
   ```js
   class GoogleAuth extends React.Component {
-  componentDidMount() {
-    // wire Google API to our project
-    // Loaded additional code `client:auth2
-    window.gapi.load('client:auth2', () => {
-      window.gapi.client.init({
-        // initialize the client
-        clientId:
-          '193501106635-772gvf9343f4ltm8idakop16ntstvpae.apps.googleusercontent.com',
-        scope: 'email'
+    state = { isSignedIn: null };
+  
+    componentDidMount() {
+      // wire Google API to our project
+      // Loaded additional code `client:auth2
+      window.gapi.load('client:auth2', () => {
+          // initialize the client
+        window.gapi.client
+          .init({
+            clientId:
+              '293501909631-886gvf9254f4ltm8idakop16ntstvpae.apps.googleusercontent.com',
+            scope: 'email'
+          })
+          .then(() => {
+            this.auth = window.gapi.auth2.getAuthInstance();
+            // update component level state shall rerender the component
+            this.setState({ isSignedIn: this.auth.isSignedIn.get() });
+          });
       });
-    });
-  }
+    }
   ...
   ```
 
