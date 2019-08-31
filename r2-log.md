@@ -1663,15 +1663,16 @@ Infos about Google OAuth can be found here https://developers.google.com/identit
 #### OAuth for Servers
 
 - results in a `token` that a server can use to make requests on behalf of the user (same as for browser)
-- used when we have an application that needs to access user data when they are __not__ logged in (e.g. application that checks emails also if user is not logged in)
+- used when we have an application that needs to access user data when they are **not** logged in (e.g. application that checks emails also if user is not logged in)
 - difficult to setup because we need to store a lot of info about the user
 
 ## OAuth for JavaScript browser application
 
 - results in a `token` that a browser app can use to make requests on behalf of the user
-- usually used when we have an app that only needs to access user data while they __are__ logged in
+- usually used when we have an app that only needs to access user data while they **are** logged in
 - very easy to set up with Google's JavaScript library to automate flow
 - my application shall have the following authentication flow
+
   - user clicks `Login with Google` button in browser (click event handler)
   - code calls google JS library to start the authentication via OAuth
   - the Google JS lib make an authentication request to Google platform
@@ -1680,6 +1681,7 @@ Infos about Google OAuth can be found here https://developers.google.com/identit
   - Logout is handled in a similar way via callback.
 
   #### How to setup the project for OAuth with Google?
+
   - Open console.developers.google.com and create a new project
     - wait for the project to be created and then select the project
     - create new credentials for the project
@@ -1688,3 +1690,25 @@ Infos about Google OAuth can be found here https://developers.google.com/identit
   - set up an OAuth confirmation screen and generate an OAuth client ID
   - install Google's API library, initialize it with the OAuth client ID
   - make sure the lib gets called any time the user clicks on the `Login with Google` button
+  - install the google api via index.htmlheader and script tag
+
+  ```html
+  <script src="https://apis.google.com/js/api.js"></script>
+  ```
+
+  - open the browser console of the web application and check if google api is sucessfully loaded via `gapi`. It should return an object.
+    - gapi only has one method `load`. This is so that the api can be kept very small for distribution. To receive further functionalities one must use load to retrieve them.
+  
+  ```js
+  class GoogleAuth extends React.Component {
+  componentDidMount() {
+    window.gapi.load('client:auth2', () => {
+      window.gapi.client.init({
+        clientId:
+          '193501106635-772gvf9343f4ltm8idakop16ntstvpae.apps.googleusercontent.com',
+        scope: 'email'
+      });
+    });
+  }
+  ...
+  ```
