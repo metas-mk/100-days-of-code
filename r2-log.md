@@ -1625,3 +1625,18 @@ is identical to
   - uses everything after the # as the `path
 - Memory Router
   - does not use the URL to track the navigation
+
+#### Practice project, wiring up routes
+
+- StreamList `path: /`
+- StreamCreate `path: /streams/new`
+- StreamEdit `path: /streams/edit`
+- StreamDelete `path: /streams/delete`
+- StreamShow `path: /streams/show`
+
+### R2D41 - August 31st, 2019
+
+#### Practice project
+
+- Added Header component to App component because Link component shall be a child of a Router.
+  - the header component is still shown on every page because it's not wired up to a path
