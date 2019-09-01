@@ -1666,7 +1666,7 @@ Infos about Google OAuth can be found here https://developers.google.com/identit
 - used when we have an application that needs to access user data when they are **not** logged in (e.g. application that checks emails also if user is not logged in)
 - difficult to setup because we need to store a lot of info about the user
 
-## OAuth for JavaScript browser application
+#### OAuth for JavaScript browser application
 
 - results in a `token` that a browser app can use to make requests on behalf of the user
 - usually used when we have an app that only needs to access user data while they **are** logged in
@@ -1680,55 +1680,61 @@ Infos about Google OAuth can be found here https://developers.google.com/identit
   - Google JS library invokes a callback function in our ReactJS/ Redux application. It is provided with an authorization token ans profile information for the given user. This is identifying the user and prove that the user is sucessfully logged in.
   - Logout is handled in a similar way via callback.
 
-  #### How to setup the project for OAuth with Google?
+#### How to setup the project for OAuth with Google?
 
-  - Open console.developers.google.com and create a new project
-    - wait for the project to be created and then select the project
-    - create new credentials for the project
-    - create OAuth client ID
-    - set authorized JS origin to http://localhost:3000 for practice project
-  - set up an OAuth confirmation screen and generate an OAuth client ID
-  - install Google's API library, initialize it with the OAuth client ID
-  - make sure the lib gets called any time the user clicks on the `Login with Google` button
-  - install the google api via index.htmlheader and script tag
+- Open console.developers.google.com and create a new project
+  - wait for the project to be created and then select the project
+  - create new credentials for the project
+  - create OAuth client ID
+  - set authorized JS origin to http://localhost:3000 for practice project
+- set up an OAuth confirmation screen and generate an OAuth client ID
+- install Google's API library, initialize it with the OAuth client ID
+- make sure the lib gets called any time the user clicks on the `Login with Google` button
+- install the google api via index.htmlheader and script tag
 
-  ```html
-  <script src="https://apis.google.com/js/api.js"></script>
-  ```
+```html
+<script src="https://apis.google.com/js/api.js"></script>
+```
 
-  - open the browser console of the web application and check if google api is sucessfully loaded via `gapi`. It should return an object.
-    - gapi only has one method `load`. This is so that the api can be kept very small for distribution. To receive further functionalities one must use load to retrieve them.
-  
-  ```js
-  class GoogleAuth extends React.Component {
-    state = { isSignedIn: null };
-  
-    componentDidMount() {
-      // wire Google API to our project
-      // Loaded additional code `client:auth2
-      window.gapi.load('client:auth2', () => {
-          // initialize the client
-        window.gapi.client
-          .init({
-            clientId:
-              '293501909631-886gvf9254f4ltm8idakop16ntstvpae.apps.googleusercontent.com',
-            scope: 'email'
-          })
-          .then(() => {
-            this.auth = window.gapi.auth2.getAuthInstance();
-            // update component level state shall rerender the component
-            this.setState({ isSignedIn: this.auth.isSignedIn.get() });
-          });
-      });
-    }
-  ...
-  ```
+- open the browser console of the web application and check if google api is sucessfully loaded via `gapi`. It should return an object.
+  - gapi only has one method `load`. This is so that the api can be kept very small for distribution. To receive further functionalities one must use load to retrieve them.
 
-  - googled for `gapi documentation` and checked out __Authentication__ 
-  - tried the API via browser console and already initialized client (see above).
-  
-  ```js
-  const auth = gapi.auth2.getAuthInstance();
-  auth.signIn(); // Google auth Popup opens
-  auth.isSignedIn.get(); // Is the user signed in?
-  ```
+```js
+class GoogleAuth extends React.Component {
+  state = { isSignedIn: null };
+
+  componentDidMount() {
+    // wire Google API to our project
+    // Loaded additional code `client:auth2
+    window.gapi.load('client:auth2', () => {
+        // initialize the client
+      window.gapi.client
+        .init({
+          clientId:
+            '293501909631-886gvf9254f4ltm8idakop16ntstvpae.apps.googleusercontent.com',
+          scope: 'email'
+        })
+        .then(() => {
+          this.auth = window.gapi.auth2.getAuthInstance();
+          // update component level state shall rerender the component
+          this.setState({ isSignedIn: this.auth.isSignedIn.get() });
+        });
+    });
+  }
+...
+```
+
+- googled for `gapi documentation` and checked out __Authentication__ 
+- tried the API via browser console and already initialized client (see above).
+
+```js
+const auth = gapi.auth2.getAuthInstance();
+auth.signIn(); // Google auth Popup opens
+auth.isSignedIn.get(); // Is the user signed in?
+```
+
+### R2D42 - September 1st, 2019
+
+#### Google auth
+
+Digging a bit into the Object one receives after `gapi.auth2.getAuthInstance().isSignedIn`. The `get()` method is not shown there. This method is provided via prototype inheritence. Another interesting method in proto is `listen()`. This is a mtehod one can pass a callback function to. It will be invokes every time a authentication status is changed.
