@@ -1785,3 +1785,5 @@ onSignIn = () => {
 - the application shall receive this information then from there
 
 This approach is not following the Redux conventions at it's best. The Redux state shall be only updated via Action Creator and dispatches to Reducers. But this way I would have to move `changeAuth()` function to an action creator and therfor would spread the functionality of GoogleAuth outside of the component. For later GoogleAuth reference purpose I'm keeping it in the GoogleAuth component.
+
+- added the action creators into GoogleAuth component and wired to `onAuthChange()`
