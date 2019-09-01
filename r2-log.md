@@ -1760,7 +1760,6 @@ Digging a bit into the Object one receives after `gapi.auth2.getAuthInstance().i
 
 - tested in console manually signing in/ out to see if the status changes in the app
   - `gapi.auth2.getAuthInstance().signIn()`
-<<<<<<< HEAD
   - `gapi.auth2.getAuthInstance().signOut()`
 
 - created some helper methods to use as event handlers for onClick event in Google buttons
@@ -1788,23 +1787,3 @@ onSignIn = () => {
 This approach is not following the Redux conventions at it's best. The Redux state shall be only updated via Action Creator and dispatches to Reducers. But this way I would have to move `changeAuth()` function to an action creator and therfor would spread the functionality of GoogleAuth outside of the component. For later GoogleAuth reference purpose I'm keeping it in the GoogleAuth component.
 
 - added the action creators into GoogleAuth component and wired to `onAuthChange()`
-||||||| merged common ancestors
-  - `gapi.auth2.getAuthInstance().signOut()`
-=======
-  - `gapi.auth2.getAuthInstance().signOut()`
-
-- created some helper methods to use as event handlers for onClick event in Google buttons
-
-```js
-...
-onSignIn = () => {
-    this.auth.signIn();
-  };
-
-  onSignOut = () => {
-    this.auth.signOut();
-  };
-...
-````
-- technically it is not needed to create helper methods, bit it makes it clearer for everybody reading the code top-bottom to find out what is going on.
->>>>>>> 03ecde4d7c272a13739ac2cb0d3c0334f21faf1e
