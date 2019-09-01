@@ -1737,4 +1737,27 @@ auth.isSignedIn.get(); // Is the user signed in?
 
 #### Google auth
 
-Digging a bit into the Object one receives after `gapi.auth2.getAuthInstance().isSignedIn`. The `get()` method is not shown there. This method is provided via prototype inheritence. Another interesting method in proto is `listen()`. This is a mtehod one can pass a callback function to. It will be invokes every time a authentication status is changed.
+Digging a bit into the Object one receives after `gapi.auth2.getAuthInstance().isSignedIn`. The `get()` method is not shown there. This method is provided via prototype inheritence. Another interesting method in proto is `listen()`. This is a mtehod one can pass a callback function to. It will be invoked every time a authentication status is changed.
+
+- added the listen call to my GoogleAuth component and wired it up with a callback function that updates state.
+
+```js
+...
+        .then(() => {
+          this.auth = window.gapi.auth2.getAuthInstance();
+          // update component level state shall rerender the component
+          this.setState({ isSignedIn: this.auth.isSignedIn.get() });
+          this.auth.isSignedIn.listen(this.onAuthChange);
+        });
+    });
+  }
+
+  onAuthChange = () => {
+    this.setState({ isSignedIn: this.auth.isSignedIn.get() });
+  };
+...
+```
+
+- tested in console manually signing in/ out to see if the status changes in the app
+  - `gapi.auth2.getAuthInstance().signIn()`
+  - `gapi.auth2.getAuthInstance().signOut()`
