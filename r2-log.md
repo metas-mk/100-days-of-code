@@ -1774,5 +1774,12 @@ onSignIn = () => {
     this.auth.signOut();
   };
 ...
-````
+```
 - technically it is not needed to create helper methods, bit it makes it clearer for everybody reading the code top-bottom to find out what is going on.
+
+#### Adding the user auth status to Redux Store
+
+- Google Auth component handles the `onSignInClick()` and `onSignOutClick()` invocations. These connect to GAPI Auth and trigger if the signIn status has changed via callback `onAuthChange()`
+- `onAuthChange()` shall trigger Action creators `signIn()` and `signOut()`
+- the Action creators shall mutate the auth state `isSignedIn: true/ false` in Redux store
+- the application shall receive this information then from there
