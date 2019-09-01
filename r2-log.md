@@ -1761,3 +1761,18 @@ Digging a bit into the Object one receives after `gapi.auth2.getAuthInstance().i
 - tested in console manually signing in/ out to see if the status changes in the app
   - `gapi.auth2.getAuthInstance().signIn()`
   - `gapi.auth2.getAuthInstance().signOut()`
+
+- created some helper methods to use as event handlers for onClick event in Google buttons
+
+```js
+...
+onSignIn = () => {
+    this.auth.signIn();
+  };
+
+  onSignOut = () => {
+    this.auth.signOut();
+  };
+...
+````
+- technically it is not needed to create helper methods, bit it makes it clearer for everybody reading the code top-bottom to find out what is going on.
