@@ -1789,3 +1789,30 @@ This approach is not following the Redux conventions at it's best. The Redux sta
 - added the action creators into GoogleAuth component and wired to `onAuthChange()`
 
 - received the userId from GoogleAuth to be used in the app via `gapi.auth2.getAuthInstance().currentUser.get().getId();`
+
+#### Redux dev tools
+
+- installed browser extension for redux dev tools. The download and installation is described here `https://github.com/zalmoxisus/redux-devtools-extension`
+  - install extension from webstore
+  - go to `Advanced store setup` to wire it up in the app project root index.js file
+
+```js
+...
+// applyMiddleware & compose
+import { createStore, applyMiddleware, compose } from 'redux';
+
+import App from './components/App';
+import reducers from './reducers';
+
+// compose
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducers, composeEnhancers(applyMiddleware));
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.querySelector('#root')
+);
+```
+
