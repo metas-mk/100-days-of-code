@@ -1816,3 +1816,9 @@ ReactDOM.render(
 );
 ```
 
+### R2D43 - September 2nd, 2019
+
+#### Redux dev tools
+
+- tried out Redux dev tools with my coding practice app
+- tried out Redux dev tools with airbnb.com
