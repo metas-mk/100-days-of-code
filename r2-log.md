@@ -1823,3 +1823,21 @@ ReactDOM.render(
 - tried out Redux dev tools with my coding practice app
 - tried out Redux dev tools with airbnb.com
 - very useful to keep Redux store content over refreshes can be done with `http://localhost:3000?debug_session=<some_string>` in browser address
+
+### R2D43 - September 3rd, 2019
+
+#### Redux Forms
+
+- installed redux-forms via `npm install redux-form@8.1.0` (was not recommended installing 8.2.0 at this time)
+
+Handling inputs without Redux
+- class based components with component level state
+- took element content from state an put it into the input element
+- when text was changed we had an onChange event which updated the state
+
+Handling inputs with Redux
+- input element has a value and an onChange handler
+- handler triggers the Redux Form action creator and maintained by Redux Form Reducer
+- reducer will hold the state of our input element (content of the form data)
+- something like mapStateToProps to pass our content into input elements as values.
+- Redux form will essentially do all of this automatically 
