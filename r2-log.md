@@ -1822,3 +1822,4 @@ ReactDOM.render(
 
 - tried out Redux dev tools with my coding practice app
 - tried out Redux dev tools with airbnb.com
+- very useful to keep Redux store content over refreshes can be done with `http://localhost:3000?debug_session=<some_string>` in browser address
