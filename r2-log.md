@@ -1860,17 +1860,15 @@ export default combineReducers({
 #### Redux Forms
 
 - added a first Field component to StreamCreate
-- in `<Field component={comp} />` a component has to be wired. The component receives a bunch of props via redux forms, this can be easily checked via `console.log(formProps)`
+- in `<Field component={comp} />` a component (e.g. input) has to be wired. The component receives a bunch of props including callback handlers via redux forms, this can be easily checked via `console.log(formProps)`
 
 ```js
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 
 class StreamCreate extends React.Component {
-  renderInput(formProps) {
-    console.log(formProps);
-    
-    return <input />;
+  renderInput({ input }) {
+    return <input {...input} />;
   }
 
   render() {
@@ -1882,8 +1880,8 @@ class StreamCreate extends React.Component {
     );
   }
 }
+
 export default reduxForm({
   form: 'streamCreate'
 })(StreamCreate);
-
 ```
