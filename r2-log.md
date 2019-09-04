@@ -1824,7 +1824,7 @@ ReactDOM.render(
 - tried out Redux dev tools with airbnb.com
 - very useful to keep Redux store content over refreshes can be done with `http://localhost:3000?debug_session=<some_string>` in browser address
 
-### R2D43 - September 3rd, 2019
+### R2D44 - September 3rd, 2019
 
 #### Redux Forms
 
@@ -1842,7 +1842,7 @@ Handling inputs with Redux
 - something like mapStateToProps to pass our content into input elements as values.
 - Redux form will essentially do all of this automatically 
 
-__How to use reduxt-form?__
+__How to use redux-form?__
 - import into `reducer/index.js` and add it to the combineReducers object
 
 ```js
@@ -1853,4 +1853,37 @@ export default combineReducers({
   auth: authReducer,
   form: formReducer
 });
+```
+
+### R2D45 - September 4th, 2019
+
+#### Redux Forms
+
+- added a first Field component to StreamCreate
+- in `<Field component={comp} />` a component has to be wired. The component receives a bunch of props via redux forms, this can be easily checked via `console.log(formProps)`
+
+```js
+import React from 'react';
+import { Field, reduxForm } from 'redux-form';
+
+class StreamCreate extends React.Component {
+  renderInput(formProps) {
+    console.log(formProps);
+    
+    return <input />;
+  }
+
+  render() {
+    return (
+      <form>
+        <Field name="title" component={this.renderInput} />
+        <Field name="description" component={this.renderInput} />
+      </form>
+    );
+  }
+}
+export default reduxForm({
+  form: 'streamCreate'
+})(StreamCreate);
+
 ```
