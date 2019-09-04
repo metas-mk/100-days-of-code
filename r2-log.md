@@ -1841,3 +1841,16 @@ Handling inputs with Redux
 - reducer will hold the state of our input element (content of the form data)
 - something like mapStateToProps to pass our content into input elements as values.
 - Redux form will essentially do all of this automatically 
+
+__How to use reduxt-form?__
+- import into `reducer/index.js` and add it to the combineReducers object
+
+```js
+...
+import { reducer as formReducer } from 'redux-form';
+
+export default combineReducers({
+  auth: authReducer,
+  form: formReducer
+});
+```
