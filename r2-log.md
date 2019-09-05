@@ -1917,3 +1917,24 @@ render() {
     >
 ...
 ```
+
+- new method `validate(formValues)` that is used by Redux Forms to do some valdation of form Fields.
+
+```js
+const validate = formValues => {
+  const errors = {};
+
+  if (!formValues.title) {
+    errors.title = 'You must enter a title';
+  }
+  if (!formValues.description) {
+    errors.description = 'You must enter a description';
+  }
+  return errors;
+};
+
+export default reduxForm({
+  form: 'streamCreate',
+  validate
+})(StreamCreate);
+```
