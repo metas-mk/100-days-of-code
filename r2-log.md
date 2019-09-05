@@ -1861,21 +1861,31 @@ export default combineReducers({
 
 - added a first Field component to StreamCreate
 - in `<Field component={comp} />` a component (e.g. input) has to be wired. The component receives a bunch of props including callback handlers via redux forms, this can be easily checked via `console.log(formProps)`
+- whenever a property appears in Field component that is not known how to handle, Redux Form just passes it as additional property. This way it can be easily used in the render method (see label beyond) 
 
 ```js
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 
 class StreamCreate extends React.Component {
-  renderInput({ input }) {
-    return <input {...input} />;
+  renderInput({ input, label }) {
+    return (
+      <div className="field">
+        <label>{label}</label>
+        <input {...input} />
+      </div>
+    );
   }
 
   render() {
     return (
-      <form>
-        <Field name="title" component={this.renderInput} />
-        <Field name="description" component={this.renderInput} />
+      <form className="ui form">
+        <Field name="title" component={this.renderInput} label="Enter Title" />
+        <Field
+          name="description"
+          component={this.renderInput}
+          label="Enter Description"
+        />
       </form>
     );
   }
@@ -1884,4 +1894,26 @@ class StreamCreate extends React.Component {
 export default reduxForm({
   form: 'streamCreate'
 })(StreamCreate);
+```
+
+### R2D46 - September 5th, 2019
+
+#### Redux Forms
+
+- Proceeding with coding of my twitch like project. Wiring up the event handling with Redux forms.
+- How to `preventDefault()` with Redux Forms? No need to call that method anymore, Redux Forms takes care about that. onSubmit() is not called with an event Object in this case, instead it has the values of the Fields inputs: 
+
+```js
+...
+onSubmit(formValues) {
+  console.log(formValues);
+}
+
+render() {
+  return (
+    <form
+      onSubmit={this.props.handleSubmit(this.onSubmit)}
+      className="ui form"
+    >
+...
 ```
