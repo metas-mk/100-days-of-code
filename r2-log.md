@@ -1962,3 +1962,6 @@ export default reduxForm({
   - Create record: POST (route `/streams`)
   - Update a record: PUT (route `/streams/:id`)
   - Delete a record: DELETE (route `/streams/:id`)
+
+#### New directory for API Server in project
+The new directory has to be initialized for the use with npm. Just type `npm init` in the directory. npm creates a `package.json` that will be used to configure the new environment.
