@@ -1946,3 +1946,19 @@ export default reduxForm({
 - if the user enters valid inputs, the validate function returns an empty object
 - if the user enter invalid input, the validate function returns an object with key-name pairs (name of field as key, name has the error message to be shown) for each invalid field.
   - Redux Form then automatically rerenders the component with each Field with error showing an error message from the returned object.
+
+### R2D46 - September 6th, 2019
+
+#### Redux Forms
+
+- only showing the error messages when a field is touched. This can be done with the meta property and touched
+
+#### JSON Server package
+
+- Streams application shall use the `json-server` package
+- REST-ful conventions in the stream application and how they will be used
+  - List all records: GET (route `/streams`)
+  - Get one particular record: GET (route `/streams/:id`)
+  - Create record: POST (route `/streams`)
+  - Update a record: PUT (route `/streams/:id`)
+  - Delete a record: DELETE (route `/streams/:id`)
