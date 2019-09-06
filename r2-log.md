@@ -1965,3 +1965,22 @@ export default reduxForm({
 
 #### New directory for API Server in project
 The new directory has to be initialized for the use with npm. Just type `npm init` in the directory. npm creates a `package.json` that will be used to configure the new environment.
+Installed the JSON Server with `npm install --save json-server`.
+
+Created a new file in API folder called db.json. This will be used as the database for the practice project.
+
+```json
+{
+  "streams": []
+}
+```
+
+Created a new entry for scripts, to start the JSON server
+
+```json
+...
+"scripts": {
+    "start": "json-server -p 3001 -w db.json"
+  },
+...
+```
