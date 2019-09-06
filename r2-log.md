@@ -1868,11 +1868,13 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 
 class StreamCreate extends React.Component {
-  renderInput({ input, label }) {
+  renderInput({ input, label, meta }) {
+    console.log(meta);
     return (
       <div className="field">
         <label>{label}</label>
         <input {...input} />
+        <div>{meta.error}</div>
       </div>
     );
   }
@@ -1938,3 +1940,9 @@ export default reduxForm({
   validate
 })(StreamCreate);
 ```
+
+- the validate function is initially rendered or as soon the user interacts with it
+- the validate function gets called with all values from the form
+- if the user enters valid inputs, the validate function returns an empty object
+- if the user enter invalid input, the validate function returns an object with key-name pairs (name of field as key, name has the error message to be shown) for each invalid field.
+  - Redux Form then automatically rerenders the component with each Field with error showing an error message from the returned object.
