@@ -1998,6 +1998,20 @@ export const createStream = formValues => async dispatch => {
   streams.post('/streams', formValues);
 };
 ```
+- wired up Redux Thunk into root index.js
+
+```js
+...
+import reduxThunk from 'redux-thunk';
+...
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(
+  reducers,
+  composeEnhancers(applyMiddleware(reduxThunk))
+);
+...
+```
 
 #### How to wire up an action creator with Redux when it's already connected to Redux Form?
 
