@@ -1984,3 +1984,17 @@ Created a new entry for scripts, to start the JSON server
   },
 ...
 ```
+
+### R2D48 - September 7th, 2019
+
+#### Integrating JSON Server to store stream information
+
+- installed axios and redux-thunk
+- new apis folder with streams.js file. This file imports axios and stores the configuration for axios baseURL.
+- new action creator for `createStream()`
+
+```js
+export const createStream = formValues => async dispatch => {
+  streams.post('/streams', formValues);
+};
+```
