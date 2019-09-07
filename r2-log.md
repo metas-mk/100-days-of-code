@@ -1998,3 +1998,35 @@ export const createStream = formValues => async dispatch => {
   streams.post('/streams', formValues);
 };
 ```
+
+#### How to wire up an action creator with Redux when it's already connected to Redux Form?
+
+After Redux Form integration this is the status quo.
+
+```js
+export default reduxForm({
+  form: 'streamCreate',
+  validate
+})(StreamCreate);
+```
+
+Solution 1:
+
+```js
+export default connect()(reduxForm({
+  form: 'streamCreate',
+  validate
+})(StreamCreate));
+```
+
+Solution 2 (preferred one because easier to read/ more transparent what is happening):
+
+```js
+const formWrapped = reduxForm({
+  form: 'streamCreate',
+  validate
+})(StreamCreate);
+
+export default connect()(formWrapped);
+```
+
