@@ -1947,7 +1947,7 @@ export default reduxForm({
 - if the user enter invalid input, the validate function returns an object with key-name pairs (name of field as key, name has the error message to be shown) for each invalid field.
   - Redux Form then automatically rerenders the component with each Field with error showing an error message from the returned object.
 
-### R2D46 - September 6th, 2019
+### R2D47 - September 6th, 2019
 
 #### Redux Forms
 
