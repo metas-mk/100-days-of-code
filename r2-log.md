@@ -2109,3 +2109,9 @@ const streamReducer = (state = {}, action) => {
 ```
 
 Important: Redux only interpretes a change if the object is really changed and not just adjusted. That's why a new object is created, the old state is spreaded, and new adjustments are included.
+
+- Installed and used lodash to handle the DELETE_STREAM case in reducer. The omit() function creates a new state object without the deleted element.
+
+```js
+_.omit(state, action.payload);
+```
