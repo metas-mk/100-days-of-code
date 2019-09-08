@@ -2094,3 +2094,18 @@ Instead of returning an array of streams - as practiced before - this time will 
 - update => {...state, name:'Hugo'}
 - adding a property => {...state, age: 30}
 -- removing a property => {...state, age: undefined} or _.omit(state, 'age')
+
+This will be used in reducer return additionally with key interpolation. Will be look like this for example:
+
+```js
+const streamReducer = (state = {}, action) => {
+  switch (action.type) {
+    case EDIT_STREAM:
+      return {...state, [action.payload.id]: action.payload};
+    default:
+      return state;
+  }
+};
+```
+
+Important: Redux only interpretes a change if the object is really changed and not just adjusted. That's why a new object is created, the old state is spreaded, and new adjustments are included.
