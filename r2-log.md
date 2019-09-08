@@ -2088,7 +2088,7 @@ export const deleteStream = id => async dispatch => {
 ...
 ```
 
-#### Reducer structure
+#### Reducer structure - Object based reducers
 
 Instead of returning an array of streams - as practiced before - this time will return an object. Each object element will be a stream. The key for each element will be the id of the stream. With the object approach the updating process will be much more straightforward
 - update => {...state, name:'Hugo'}
