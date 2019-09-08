@@ -2115,3 +2115,9 @@ Important: Redux only interpretes a change if the object is really changed and n
 ```js
 _.omit(state, action.payload);
 ```
+
+- using lodash to map an Array to a new object and assing the value of a property as object key with `_.mapKeys()`
+
+```js
+_.mapKeys(action.payload, 'id');
+```
