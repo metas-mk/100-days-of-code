@@ -1957,11 +1957,11 @@ export default reduxForm({
 
 - Streams application shall use the `json-server` package
 - REST-ful conventions in the stream application and how they will be used
-  - List all records: GET (route `/streams`)
-  - Get one particular record: GET (route `/streams/:id`)
-  - Create record: POST (route `/streams`)
-  - Update a record: PUT (route `/streams/:id`)
-  - Delete a record: DELETE (route `/streams/:id`)
+  - List all records: GET (route `/streams`) => Array of records
+  - Get one particular record: GET (route `/streams/:id`) => Single record
+  - Create record: POST (route `/streams`) => Single record
+  - Update a record: PUT (route `/streams/:id`) => Single record
+  - Delete a record: DELETE (route `/streams/:id`) => Nothing
 
 #### New directory for API Server in project
 The new directory has to be initialized for the use with npm. Just type `npm init` in the directory. npm creates a `package.json` that will be used to configure the new environment.
