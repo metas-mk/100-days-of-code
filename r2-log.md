@@ -2047,3 +2047,10 @@ export default connect(
 )(formWrapped);
 ```
 
+### R2D49 - September 8th, 2019
+
+#### Adding reducers to consume the actions
+
+- new type entry for `CREATE_STREAM`
+- imported new type to action creator index.js
+- added dispatch with action object to `createStream()` method 
