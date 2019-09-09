@@ -2149,3 +2149,17 @@ export const createStream = formValues => async (dispatch, getState) => {
 };
 ...
 ```
+
+- created a new helper method to find out if the mapped stream is my own stream. In such cases I want to render an edit and delete button.
+
+```js
+...
+renderAdmin = stream => {
+    if (stream.userId === this.props.currentUserId) {
+      return <div>Edit/ Delete</div>;
+    }
+  };
+...
+```
+
+- added a `renderCreate()` button and helper method with a link to `/streams/new`
