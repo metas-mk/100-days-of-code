@@ -2138,3 +2138,14 @@ const mapStateToProps = state => {
 
 - new `renderList()` method that maps the stream array and creates stream entries
 - called `renderList()` then via `render()` method
+- retrieving the userId from state via `getState()` in action creator
+
+```js
+...
+export const createStream = formValues => async (dispatch, getState) => {
+  const { userId } = getState().auth;
+  const response = await streams.post('/streams', {...formValues, userId});
+  dispatch({ type: CREATE_STREAM, payload: response.data });
+};
+...
+```
