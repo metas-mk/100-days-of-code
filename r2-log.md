@@ -2121,3 +2121,10 @@ _.omit(state, action.payload);
 ```js
 _.mapKeys(action.payload, 'id');
 ```
+
+### R2D50 - September 9th, 2019
+
+#### StreamList Component
+
+- implementing the StreamList component
+- refactoring it to a class-based component so I can use the `componentDidMount()` method to trigger the action `fetchStreams()`
