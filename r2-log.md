@@ -2128,3 +2128,13 @@ _.mapKeys(action.payload, 'id');
 
 - implementing the StreamList component
 - refactoring it to a class-based component so I can use the `componentDidMount()` method to trigger the action `fetchStreams()`
+- created a `mapStateToProps()` method and turned the Object of streams into an array with `Object.values()`
+
+```js
+const mapStateToProps = state => {
+  return { streams: Object.values(state.streams) };
+};
+```
+
+- new `renderList()` method that maps the stream array and creates stream entries
+- called `renderList()` then via `render()` method
