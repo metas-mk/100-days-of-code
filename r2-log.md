@@ -2163,3 +2163,21 @@ renderAdmin = stream => {
 ```
 
 - added a `renderCreate()` button and helper method with a link to `/streams/new`
+
+### R2D51 - September 10th, 2019
+
+#### Intentional vs. programmatic Navigation
+
+*Intentional Navigation:*
+User clicks on a link to move to another page.
+
+*Programmatic Navigation:*
+The user is forced to another page through code.
+
+Create a BrowserHistory for programmatic Navigation. New file in src folder called `history.js`. This file shall have the following code:
+
+```js
+import { createBrowserHistory } from 'history';
+
+export default createBrowserHistory();
+```
