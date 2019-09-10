@@ -2181,3 +2181,5 @@ import { createBrowserHistory } from 'history';
 
 export default createBrowserHistory();
 ```
+
+This will create a history Object that can be maintained manually instead of automatically through the react-router-dom. For that it's needed to switch from `BrowserRouter` to `Router` in App.js and to use history as property fot the Router component.
