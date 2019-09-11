@@ -2190,3 +2190,8 @@ This will create a history Object that can be maintained manually instead of aut
 
 - imported history object in action cretor `index.js`
 - used history object in `createStream()` after dispatch via `history.push('/');` which navigates to url root
+
+#### Selection Reducer/ URL-based selection
+
+**URL-based selection:** Put the ID of the stream being edited into the URL.
+**Selection Reducer:** When a user clicks on a stream to edit it, use a `selectionReducer` to record what stream is being edited.
