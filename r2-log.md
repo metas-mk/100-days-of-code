@@ -2183,3 +2183,10 @@ export default createBrowserHistory();
 ```
 
 This will create a history Object that can be maintained manually instead of automatically through the react-router-dom. For that it's needed to switch from `BrowserRouter` to `Router` in App.js and to use history as property fot the Router component.
+
+### R2D52 - September 11th, 2019
+
+#### Programmatic Navigation with history object
+
+- imported history object in action cretor `index.js`
+- used history object in `createStream()` after dispatch via `history.push('/');` which navigates to url root
