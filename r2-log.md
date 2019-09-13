@@ -2195,3 +2195,33 @@ This will create a history Object that can be maintained manually instead of aut
 
 **URL-based selection:** Put the ID of the stream being edited into the URL.
 **Selection Reducer:** When a user clicks on a stream to edit it, use a `selectionReducer` to record what stream is being edited.
+
+### R2D53 - September 13th, 2019
+
+#### Programmatic Navigation with history object
+- swapped the button element in `StreamList.js` against a tag with the `Link` component
+
+```js
+...
+renderAdmin = stream => {
+    if (stream.userId === this.props.currentUserId) {
+      return (
+        <div className="right floated content">
+          <Link to={`/streams/edit/${stream.id}`} className="ui button primary">
+            Edit
+          </Link>
+          <button className="ui button negative">Delete</button>
+        </div>
+      );
+    }
+  };
+...
+```
+
+- added a small change to `App.js` and modified the path for the StreamEdit route
+
+```js
+...
+<Route path="/streams/edit/:id" exact component={StreamEdit} />
+...
+```
