@@ -2225,3 +2225,6 @@ renderAdmin = stream => {
 <Route path="/streams/edit/:id" exact component={StreamEdit} />
 ...
 ```
+
+- the usage of `:anything` in a route path allows to use that as variable. the colon is the magical character here
+- when using react-router-dom the Route component automatically adds a bunch of props that can be used for the navigation
