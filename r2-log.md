@@ -2232,3 +2232,26 @@ renderAdmin = stream => {
 > With React-Router, each component needs to be designed to work in isolation. That means each component has to fetch its own data!
 
 - one shall not assume that data might have already been loaded somehwere in the application.
+
+### R2D54 - September 14th, 2019
+
+#### Programmatic Navigation with history object
+
+- making sure the `StreamEdit` component fetches the stream data beforehand
+- refactored the component to a class besed component and created the `componentDidMount()` method to initially fetch the stream for the given id
+- this shall be done in other components in similar war to ensure that the needed stream data is loaded initially into Redux store
+
+```js
+...
+import { fetchStream } from '../../actions';
+
+class StreamEdit extends React.Component {
+  componentDidMount() {
+    this.props.fetchStream(this.props.match.params.id);
+  }
+...
+export default connect(
+  mapStateToProps,
+  { fetchStream }
+)(StreamEdit);
+```
