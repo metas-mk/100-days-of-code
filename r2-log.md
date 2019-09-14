@@ -2352,3 +2352,6 @@ const StreamDelete = () => {
       <Modal />
 ...
 ```
+
+- added an onClick event to outer div in Modal.js. This event shall route to `/` as soon a user clicks outside of the Modal. If the user clicks on a child element of that div, the user is also navigated back. Why?
+  - this is because of the so called event propagation. As soon an event is triggered, the event is bubble up to the parents as log there is no handler found to react on it. One way to interrupt this, is to stop the propagation via `onClick={e => e.stopPropagation()` in a child element.
