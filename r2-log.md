@@ -2230,3 +2230,5 @@ renderAdmin = stream => {
 - when using react-router-dom the Route component automatically adds a bunch of props that can be used for the navigation
 
 > With React-Router, each component needs to be designed to work in isolation. That means each component has to fetch its own data!
+
+- one shall not assume that data might have already been loaded somehwere in the application.
