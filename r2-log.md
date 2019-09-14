@@ -2267,3 +2267,22 @@ export default connect(
   - took everything from `StreamCreate` and created a new `StreamForm` component with different changes
 - reafactored `StreamEdit` which is also wrapped withing ReduxForm
   - using sprecial props `initialValues` with keys `title` and `description` to automatically add these to `StreamEdit` properties with the same name. This a a convenient feature of ReduxForm to achieve this kind of stuff.
+  - using lodash to only pick the properties needed for StreamEdit. Only updated properties shall be returned.
+
+```js
+render() {
+    if (!this.props.stream) {
+      return <div>Loading...</div>;
+    }
+
+    return (
+      <div>
+        <h3>Edit a Stream</h3>
+        <StreamForm
+          initialValues={_.pick(this.props.stream, 'title', 'description')}
+          onSubmit={this.onSubmit}
+        />
+      </div>
+    );
+  }
+```
