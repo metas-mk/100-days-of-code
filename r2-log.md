@@ -2255,3 +2255,13 @@ export default connect(
   { fetchStream }
 )(StreamEdit);
 ```
+
+#### Code reuse
+
+- `StreamEdit` and `StreamCreate` components are very similiar besides 3 things
+  - Title
+  - input fields with or without iniial content
+  - action creator that is triggered when pressing the submit button
+- abstract out the form logic to a new component `StreamForm` and pass down some initial values for `StreamEdit` and a onSubmit callback function for `StreamEdit`and `StreamCreate`
+- created a new component `StreamForm`
+  - took everything from `StreamCreate` and created a new `StreamForm` component with different changes
