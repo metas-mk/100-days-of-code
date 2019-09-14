@@ -2287,7 +2287,7 @@ render() {
   }
 ```
 - tested the new StreamEdit and now happens that the userId is lost after update. Debugging.
-  - found that I'm using PUT request in action creator for `editStream()`. PUT always updated all properties of a record.
+  - found that I'm using PUT request in action creator for `editStream()`. PUT always updates/ replaces all properties of a record.
   - changed to PATCH request (only updates some properties of a record) solved the issue.
 
 ```js
@@ -2297,5 +2297,58 @@ export const editStream = (id, formValues) => async dispatch => {
   dispatch({ type: EDIT_STREAM, payload: response.data });
   history.push('/');
 };
+...
+```
+
+#### Modal overlay for StreamDelete
+
+It seems to be surprisingly difficult to create a modal overlay with React. Everything has to be nested into the div with id 'root'. A modal component would have to be nested into the page hierarchy like this example:
+
+`body>div 'root'>Provider>App>Route>StreamDelete>Modal>Button`
+
+A solution to get around this could be React Portals.
+
+- created a new component file `Modal.js`
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const Modal = props => {
+  return ReactDOM.createPortal(
+    <div className="ui dimmer modals visible active">
+      <div className="ui starndard modal visible active">
+        Test Modal Test Modal
+      </div>
+    </div>,
+    document.querySelector('#modal')
+  );
+};
+
+export default Modal;
+```
+
+- added a div with modal id in index.html
+
+```html
+...
+<body>
+...
+    <div id="root"></div>
+    <div id="modal"></div>
+...
+```
+
+- added Modal to StreamDelete component.
+
+```js
+...
+import Modal from '../Modal';
+
+const StreamDelete = () => {
+  return (
+    <div>
+      StreamDelete
+      <Modal />
 ...
 ```
