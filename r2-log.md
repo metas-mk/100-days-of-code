@@ -2286,3 +2286,16 @@ render() {
     );
   }
 ```
+- tested the new StreamEdit and now happens that the userId is lost after update. Debugging.
+  - found that I'm using PUT request in action creator for `editStream()`. PUT always updated all properties of a record.
+  - changed to PATCH request (only updates some properties of a record) solved the issue.
+
+```js
+...
+export const editStream = (id, formValues) => async dispatch => {
+  const response = await streams.patch(`/streams/${id}`, formValues);
+  dispatch({ type: EDIT_STREAM, payload: response.data });
+  history.push('/');
+};
+...
+```
