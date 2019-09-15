@@ -2363,3 +2363,28 @@ const StreamDelete = () => {
 
 - adjusted the route in `App.js` so that the `:id` variable is available for StreamShow
 - added a Link component to the StreamList entry header title. Now when clicking the link the user is navigated to the StreamShow page.
+- the new route in Apps.js leads to showing an additional component when navigating to StreamCreate component. Both paths match when navigating to `localhost:3000/streams/new`
+
+```js
+...
+<Route path="/streams/new" exact component={StreamCreate} />
+...
+<Route path="/streams/:id" exact component={StreamShow} />
+...
+```
+
+- the Switch component in `react-router-dom` can help with that. Using it tells React to only render the first route that is found and matched. 
+
+```js
+...
+import { Router, Route, Switch } from 'react-router-dom';
+...
+          <Switch>
+            <Route path="/" exact component={StreamList} />
+            <Route path="/streams/new" exact component={StreamCreate} />
+            <Route path="/streams/edit/:id" exact component={StreamEdit} />
+            <Route path="/streams/delete/:id" exact component={StreamDelete} />
+            <Route path="/streams/:id" exact component={StreamShow} />
+          </Switch>
+...
+```
