@@ -2397,3 +2397,38 @@ import { Router, Route, Switch } from 'react-router-dom';
 - imported connect and fetchStreams action creator
 - added mapStateToProps method
 - exported connect
+
+#### RMTP Server
+- installed a standalone RMTP Server via `npm install --save node-media-server`
+- documentation can be found on github https://github.com/illuspas/Node-Media-Server
+- the following configration has to be done for singlecore mode in a index.js file
+
+```js
+const NodeMediaServer = require('node-media-server');
+
+const config = {
+  rtmp: {
+    port: 1935,
+    chunk_size: 60000,
+    gop_cache: true,
+    ping: 30,
+    ping_timeout: 60
+  },
+  http: {
+    port: 8000,
+    allow_origin: '*'
+  }
+};
+
+var nms = new NodeMediaServer(config)
+nms.run();
+```
+- edit the package.json and add a start script like this
+
+```js
+...
+"scripts": {
+    "start": "node index.js"
+  },
+...
+```
