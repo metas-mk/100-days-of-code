@@ -2388,3 +2388,12 @@ import { Router, Route, Switch } from 'react-router-dom';
           </Switch>
 ...
 ```
+
+### R2D56 - September 16th, 2019
+
+#### Working on StreamShow component
+
+- refactored initial StreamShow component to a class-based component.
+- imported connect and fetchStreams action creator
+- added mapStateToProps method
+- exported connect
