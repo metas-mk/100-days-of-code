@@ -2432,3 +2432,9 @@ nms.run();
   },
 ...
 ```
+
+#### React Context System
+
+*Props System* Gets data from a parent component to a direct child component
+
+*Context System* Gets data from a parent component to any nested child componennt.
