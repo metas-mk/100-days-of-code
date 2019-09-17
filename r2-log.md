@@ -2438,3 +2438,10 @@ nms.run();
 *Props System* Gets data from a parent component to a direct child component
 
 *Context System* Gets data from a parent component to any nested child componennt.
+
+### R2D57 - September 17th, 2019
+
+#### Developer Documentation @metasfresh
+
+- creating further developer documentation in the metasfresh-webui-frontend project https://github.com/metasfresh/metasfresh-webui-frontend
+- reading about Tether (react-tether) http://tether.io/ and how it is used to position elements exactly together and avoid them splitting them on a page
