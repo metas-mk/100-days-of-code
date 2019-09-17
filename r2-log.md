@@ -2445,3 +2445,14 @@ nms.run();
 
 - creating further developer documentation in the metasfresh-webui-frontend project https://github.com/metasfresh/metasfresh-webui-frontend
 - reading about Tether (react-tether) http://tether.io/ and how it is used to position elements exactly together and avoid them splitting them on a page
+
+#### metasfresh application structure
+
+I'm reading into metasfresh ERP frontend code to learn more about development with JavaScript, ReactJS and Redux.
+
+- *index.jsx*
+- *App.js*
+- *Login.js*
+- *LoginForm.js*
+- *RawList.js*
+- *SelectionDropdown.js*
