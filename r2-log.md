@@ -2456,3 +2456,9 @@ I'm reading into metasfresh ERP frontend code to learn more about development wi
 - *LoginForm.js*
 - *RawList.js*
 - *SelectionDropdown.js*
+
+### R2D58 - September 18th, 2019
+
+#### Developer Documentation @metasfresh
+
+Reading code at https://github.com/metasfresh/metasfresh-webui-frontend and learning how the frontend of metasfresh WebUI is build with ReactJS, Redux and more libraries. A lot of things i've learned in the last 8 weeks are used in this open source project. At the moment i'm using pen and paper to take notes and draw pictures. When ready I will include the notes into the developer documentation od metasfresh.
