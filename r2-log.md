@@ -2462,3 +2462,9 @@ I'm reading into metasfresh ERP frontend code to learn more about development wi
 #### Developer Documentation @metasfresh
 
 Reading code at https://github.com/metasfresh/metasfresh-webui-frontend and learning how the frontend of metasfresh WebUI is build with ReactJS, Redux and more libraries. A lot of things i've learned in the last 8 weeks are used in this open source project. At the moment i'm using pen and paper to take notes and draw pictures. When ready I will include the notes into the developer documentation od metasfresh.
+
+### R2D59 - September 19th, 2019
+
+#### Debugging issue @metasfresh
+
+Debugging an Issue in metasfresh project. Timestamps were show as number value instead of string Date/ Time format in readonly Table Cells. Found the error and replaced the formatting argument for Moment.js. Pull Request created and merged. Besides that did a code Review for another issue in the frontend repository.
