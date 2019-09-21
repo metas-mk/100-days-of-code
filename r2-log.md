@@ -2468,3 +2468,9 @@ Reading code at https://github.com/metasfresh/metasfresh-webui-frontend and lear
 #### Debugging issue @metasfresh
 
 Debugging an Issue in metasfresh project. Timestamps were show as number value instead of string Date/ Time format in readonly Table Cells. Found the error and replaced the formatting argument for Moment.js. Pull Request created and merged. Besides that did a code Review for another issue in the frontend repository.
+
+### R2D60 - September 20th, 2019
+
+#### Debugging issue @metasfresh, documenting component hierarchy
+
+Debugged and fixed an issue needed for the Friday release of metasfresh. Replaced the hardcoded argument for a method though a constant object and used in several places.
