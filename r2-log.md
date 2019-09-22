@@ -2488,3 +2488,9 @@ import Button from components/Button;
 ```
 
 Will try this in the metasfresh project too.
+
+### R2D62 - September 22nd, 2019
+
+#### Documenting component hierarchy @metasfresh
+
+Further going through the components structure of @metasfresh and learning more about ReactJS, Redux and how to implement such a large project. Since the beginning of the metasfresh frontend project in 2016 I've been on the concept side most of my time. It's an amaziong feeling now to learn now how the ideas and requirements I've launched in the past have been implemented in detail and how complex everything has become in such a short time.
