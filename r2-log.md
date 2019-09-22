@@ -2474,3 +2474,17 @@ Debugging an Issue in metasfresh project. Timestamps were show as number value i
 #### Debugging issue @metasfresh, documenting component hierarchy
 
 Debugged and fixed an issue needed for the Friday release of metasfresh. Replaced the hardcoded argument for a method though a constant object and used in several places.
+
+### R2D61 - September 21st, 2019
+
+#### Documenting component hierarchy @metasfresh
+
+Creating the initial documetation tags in metasfresh frontend project. On the way documenting the component hierachy to have a better overview how everything works together.
+
+Also reading about not using absolute paths in imports. Using imports like `../../../Button` can make it very error prone when restructuring a project. Since CRA 3 is is possible to use absolute import paths with a jsconfig.json adding compiler options with the baseURL. After that import statements can look like this 
+
+```js
+import Button from components/Button;
+```
+
+Will try this in the metasfresh project too.
