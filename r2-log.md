@@ -2494,3 +2494,9 @@ Will try this in the metasfresh project too.
 #### Documenting component hierarchy @metasfresh
 
 Further going through the components structure of @metasfresh and learning more about ReactJS, Redux and how to implement such a large project. Since the beginning of the metasfresh frontend project in 2016 I've been on the concept side most of my time. It's an amaziong feeling now to learn now how the ideas and requirements I've launched in the past have been implemented in detail and how complex everything has become in such a short time.
+
+### R2D63 - September 23rd, 2019
+
+#### Documenting component hierarchy @metasfresh
+
+Documenting @metasfresh component hierarchy. It's still a long way to go completing the developer documentation since it's a large applicationm but it will help me and others a lot to learn it faster in future.
