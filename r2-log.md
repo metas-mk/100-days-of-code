@@ -2500,3 +2500,9 @@ Further going through the components structure of @metasfresh and learning more 
 #### Documenting component hierarchy @metasfresh
 
 Documenting @metasfresh component hierarchy. It's still a long way to go completing the developer documentation since it's a large applicationm but it will help me and others a lot to learn it faster in future.
+
+### R2D64 - September 24th, 2019
+
+#### Documenting component hierarchy @metasfresh
+
+Proceeding with the developer documentation @metasfresh ReactJS frontend project. There are still a lot of components to work through and document initiually. Getting a better feeling for everything the more I read and write about it. For the next days I planned to include a learning session about React context. I've seen that is used at metasfresh too and will need some backround information about hows that works and is used soon.
