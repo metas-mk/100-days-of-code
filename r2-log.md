@@ -2512,3 +2512,9 @@ Proceeding with the developer documentation @metasfresh ReactJS frontend project
 #### Documenting component hierarchy @metasfresh
 
 After a long day doing a Gap Analysis for a new customer, just did some easy documentation stuff on metasfreshj project. 
+
+### R2D66 - September 26th, 2019
+
+#### Reviewing Pull Request & debugging @metasfresh
+
+Reviewed a Pull Request. Started a local webserver via `npm start` in ReactJS Project and tested a Pull Request locally. Further debugged a layout problem, created an issue and prepared the solution.
