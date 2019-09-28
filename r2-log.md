@@ -2518,3 +2518,9 @@ After a long day doing a Gap Analysis for a new customer, just did some easy doc
 #### Reviewing Pull Request & debugging @metasfresh
 
 Reviewed a Pull Request. Started a local webserver via `npm start` in ReactJS Project and tested a Pull Request locally. Further debugged a layout problem, created an issue and prepared the solution.
+
+### R2D67 - September 27th, 2019
+
+#### Developer documentation @metasfresh
+
+Reading source code @metasfresh and creating documentation tags in components and further compületing the component hierarchy tree.
