@@ -2524,3 +2524,9 @@ Reviewed a Pull Request. Started a local webserver via `npm start` in ReactJS Pr
 #### Developer documentation @metasfresh
 
 Reading source code @metasfresh and creating documentation tags in components and further compületing the component hierarchy tree.
+
+### R2D68 - September 28th, 2019
+
+#### Developer documentation @metasfresh
+
+Further creating the developer documentation and component hierarchy diagram @metasfresh.
