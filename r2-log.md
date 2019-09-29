@@ -2530,3 +2530,9 @@ Reading source code @metasfresh and creating documentation tags in components an
 #### Developer documentation @metasfresh
 
 Further creating the developer documentation and component hierarchy diagram @metasfresh.
+
+### R2D69 - September 29th, 2019
+
+#### Fixed a layout issue @metasfresh
+
+Today i debugged and fixed a layout issue https://github.com/metasfresh/metasfresh-webui-frontend/issues/2385 in metasfresh frontend.
