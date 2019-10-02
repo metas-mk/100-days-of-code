@@ -2536,3 +2536,17 @@ Further creating the developer documentation and component hierarchy diagram @me
 #### Fixed a layout issue @metasfresh
 
 Today i debugged and fixed a layout issue https://github.com/metasfresh/metasfresh-webui-frontend/issues/2385 in metasfresh frontend.
+
+### R2D70,71 - September 30th - October 1st, 2019
+
+#### Developer documentation @metasfresh
+
+Creating the developer documentation and component hierarchy diagram @metasfresh.
+
+#### Reviewing a Pull Request @metasfresh
+
+Tested an issue fix about Date Format in Filter Dropdown did the code review of a Pull Request @metasfresh.
+
+#### Fixing Layout Bug @metasfresh
+
+Debugging and fixing a layout issue @metasfresh.
