@@ -2550,3 +2550,9 @@ Tested an issue fix about Date Format in Filter Dropdown did the code review of 
 #### Fixing Layout Bug @metasfresh
 
 Debugging and fixing a layout issue @metasfresh.
+
+### R2D72, 73 - October 2nd - October 5th, 2019
+
+#### Developer documentation @metasfresh
+
+Creating the developer documentation and component hierarchy diagram @metasfresh.
