@@ -2556,3 +2556,11 @@ Debugging and fixing a layout issue @metasfresh.
 #### Developer documentation @metasfresh
 
 Creating the developer documentation and component hierarchy diagram @metasfresh.
+
+### R2D76,79 - October 6th - October 9th, 2019
+
+#### Select all modifications in a git repo between amount of days ago
+
+I just had to find out which files have been changed in a github repository between 28-20 days ago.
+
+`git diff --name-status "@{28 days ago}" "@{20 days ago}"`
