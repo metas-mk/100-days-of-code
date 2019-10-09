@@ -2564,3 +2564,7 @@ Creating the developer documentation and component hierarchy diagram @metasfresh
 I just had to find out which files have been changed in a github repository between 28-20 days ago.
 
 `git diff --name-status "@{28 days ago}" "@{20 days ago}"`
+
+#### Debugged performance issue in AD-Tab
+
+Started @metasfresh frontend in browser, started the ReactJS tools and checked which components are affected by the AD-Tab GET. Saw that it could be in Table, TableCell and TableItem among other candidates. UI checked the commits in those components and found a change in the area of object comparison which was changed in the last 28-20 days.
