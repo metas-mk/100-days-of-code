@@ -2577,3 +2577,23 @@ I'm back from a longer pause of daily coding. I am starting the 2nd round from d
 
 Working throught the basics of nodejs development. I intentionally decided to start with such a new topic to also repeat Javascript basics that i've learned in the last year, before my pause.
 AFter the first few hours I recognize that a lot of knowhow is still there and am very happy that a lot of concept is still present in my mind.
+
+#### Repeating IIFE
+
+Repeating IIFE Concept that will be used a lot in NodeJS to protect code interference between modules. Using the shorthand description of an anonymous funtion encpsulates the code in the function and runs it automatically through direct invocation. 
+
+```js
+// IIFE example
+// 1. anonymous function
+// 2. paranthesis around it turns it into an expression
+// 3. invoking
+// = immediately invoked funtional expression
+(function() {
+  var firstname = 'John';
+  console.log(firstname);
+})();
+
+var firstname = 'Jane';
+console.log(firstname);
+```
+
