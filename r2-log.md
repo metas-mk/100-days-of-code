@@ -2572,3 +2572,8 @@ Started @metasfresh frontend in browser, started the ReactJS tools and checked w
 ### R2D1 - January 25th, 2020
 
 I'm back from a longer pause of daily coding. I am starting the 2nd round from day 1 again.
+
+#### Basics of nodejs
+
+Working throught the basics of nodejs development. I intentionally decided to start with such a new topic to also repeat Javascript basics that i've learned in the last year, before my pause.
+AFter the first few hours I recognize that a lot of knowhow is still there and am very happy that a lot of concept is still present in my mind.
