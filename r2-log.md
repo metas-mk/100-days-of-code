@@ -2606,3 +2606,7 @@ console.log(firstname);
 ### R2D2 - January 26th, 2020
 
 Proceeding with coding and learning of NodeJS Modules. I'm recognizing that it is much easier learning NodeJS now that I'm having the basics of JavaScript present. Went through an IIFE session yesterday very fast and did not have the impression that a lot of repetition was needed.
+
+#### Structuring Modules in NodeJS
+
+Learning about different module patterns.
