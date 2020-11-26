@@ -2635,7 +2635,7 @@ var util = require('util');
 
 Back again, willing to dedicate time and being able to set a sufficient priority to get back to my mission of learning Javascript and React properly from ground up. My priorities in the last year were totally focussed on private challenges and it did not feel right nor good for me proceeding with my mission so I paused.
 
-Now 11 months later, challenges tackeled and things moving in the right direction I have found the time and curiosity again to dive into software deleoping moduns again.
+Now 11 months later, challenges tackled and things moving in the right direction I have found the time and curiosity again to dive into software deleoping moduns again.
 
 So I'm gonna start my Day 0 of "Round 2 - 100 Days of code" again. From COBOL to React.
 
@@ -2645,9 +2645,16 @@ So I'm gonna start my Day 0 of "Round 2 - 100 Days of code" again. From COBOL to
 - Don't touch the DOM, i'll do it
 - Components like Lego blocks
   - Components are plain javascript javascript functions that receive input (props) and return something that looks like HTML
+- Unidirectional Dataflow
+- Virtual DOM: Javascript version of the DOM (Javascript treelike Object)
 
 ### Useful libraries of the day
 
 - material-ui https://material-ui.com/
 - react-bootstrap https://react-bootstrap.github.io/
 - blueprintjs https://blueprintjs.com/
+
+### Chrome React developer tools
+
+- See Elements (DOM)
+- See React Component Tree/ Hierarchy (React)
