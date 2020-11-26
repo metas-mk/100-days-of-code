@@ -350,7 +350,7 @@ render() {
 - alternatively can be solved in using ES6 arrwow function instead.
 
 ```js
-onFormSubmit = event => {
+onFormSubmit = (event) => {
   event.preventDefault();
   console.log(this.state.term);
 };
@@ -390,7 +390,7 @@ _Child component_
 
 ```js
 // child
-onFormSubmit = event => {
+onFormSubmit = (event) => {
   event.preventDefault();
 
   // prop is the reference to callback function of App.onSearchSubmit()
@@ -588,8 +588,8 @@ export default axios.create({
   params: {
     part: 'snippet',
     maxResults: 5,
-    key: KEY
-  }
+    key: KEY,
+  },
 });
 ```
 
@@ -691,17 +691,17 @@ const createPolicy = (name, amount) => {
     type: 'CREATE_POLICY',
     payload: {
       name: name,
-      amount: amount
-    }
+      amount: amount,
+    },
   };
 };
 
-const deletePolicy = name => {
+const deletePolicy = (name) => {
   return {
     type: 'DELETE_POLICY',
     payload: {
-      name: name
-    }
+      name: name,
+    },
   };
 };
 
@@ -710,8 +710,8 @@ const createClaim = (name, amountOfMoneyToCollect) => {
     type: 'CREATE_CLAIM',
     payload: {
       name: name,
-      amountOfMoneyToCollect: amountOfMoneyToCollect
-    }
+      amountOfMoneyToCollect: amountOfMoneyToCollect,
+    },
   };
 };
 ```
@@ -728,7 +728,7 @@ const { createStore, combineReducers } = Redux;
 const ourDepartments = combineReducers({
   accounting: accounting,
   claimsHistory: claimsHistory,
-  policies: policies
+  policies: policies,
 });
 ```
 
@@ -784,7 +784,7 @@ const policies = (listOfPolicies = [], action) => {
   if (action.type === 'CREATE_POLICY') {
     return [...listOfPolicies, action.payload.name];
   } else if (action.type === 'DELETE_POLICY') {
-    return listOfPolicies.filter(name => name !== action.payload.name);
+    return listOfPolicies.filter((name) => name !== action.payload.name);
   }
 
   return listOfPolicies;
@@ -898,7 +898,7 @@ In component a new function `mapStateToProps` is implemented. This function is t
 ```js
 // state is the complete state of our Redux store
 // mapStateToProps is naming convention
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   console.log(state);
   return state;
 };
@@ -925,7 +925,7 @@ export default connect(mapStateToProps)(SongList);
 ```js
 // state is the complete state of our Redux store
 // mapStateToProps is naming convention
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return { songs: state.songs };
 };
 ```
@@ -972,7 +972,7 @@ const SongDetail = ({ song }) => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return { song: state.selectedSong };
 };
 
@@ -1005,7 +1005,7 @@ If you quickly want to start a React-Redux project and don't want to start worki
 import { combineReducers } from 'redux';
 
 export default combineReducers({
-  replaceMe: () => '666'
+  replaceMe: () => '666',
 });
 ```
 
@@ -1037,7 +1037,7 @@ export default combineReducers({
 import { combineReducers } from 'redux';
 
 export default combineReducers({
-  replaceMe: () => '666'
+  replaceMe: () => '666',
 });
 ```
 
@@ -1046,7 +1046,7 @@ export default combineReducers({
 ```js
 export const fetchPosts = () => {
   return {
-    type: 'FETCH_POSTS'
+    type: 'FETCH_POSTS',
   };
 };
 ```
@@ -1072,7 +1072,7 @@ export default connect(
 import axios from 'axios';
 
 export default axios.create({
-  baseURL: 'https://jsonplaceholder.typicode.com'
+  baseURL: 'https://jsonplaceholder.typicode.com',
 });
 ```
 
@@ -1089,7 +1089,7 @@ export const fetchPosts = async () => {
   const response = await jsonPlaceholder.get('/posts');
   return {
     type: 'FETCH_POSTS',
-    payload: response
+    payload: response,
   };
 };
 ```
@@ -1438,7 +1438,7 @@ export const fetchPostsAndUsers = () => async (dispatch, getState) => {
   await dispatch(fetchPosts());
 
   const userIds = _.uniq(_.map(getState().posts, 'userId'));
-  userIds.forEach(id => dispatch(fetchUser(id)));
+  userIds.forEach((id) => dispatch(fetchUser(id)));
 };
 ```
 
@@ -1724,7 +1724,7 @@ class GoogleAuth extends React.Component {
 ...
 ```
 
-- googled for `gapi documentation` and checked out __Authentication__ 
+- googled for `gapi documentation` and checked out **Authentication**
 - tried the API via browser console and already initialized client (see above).
 
 ```js
@@ -1759,6 +1759,7 @@ Digging a bit into the Object one receives after `gapi.auth2.getAuthInstance().i
 ```
 
 - tested in console manually signing in/ out to see if the status changes in the app
+
   - `gapi.auth2.getAuthInstance().signIn()`
   - `gapi.auth2.getAuthInstance().signOut()`
 
@@ -1775,6 +1776,7 @@ onSignIn = () => {
   };
 ...
 ```
+
 - technically it is not needed to create helper methods, bit it makes it clearer for everybody reading the code top-bottom to find out what is going on.
 
 #### Adding the user auth status to Redux Store
@@ -1831,18 +1833,21 @@ ReactDOM.render(
 - installed redux-forms via `npm install redux-form@8.1.0` (was not recommended installing 8.2.0 at this time)
 
 Handling inputs without Redux
+
 - class based components with component level state
 - took element content from state an put it into the input element
 - when text was changed we had an onChange event which updated the state
 
 Handling inputs with Redux
+
 - input element has a value and an onChange handler
 - handler triggers the Redux Form action creator and maintained by Redux Form Reducer
 - reducer will hold the state of our input element (content of the form data)
 - something like mapStateToProps to pass our content into input elements as values.
-- Redux form will essentially do all of this automatically 
+- Redux form will essentially do all of this automatically
 
-__How to use redux-form?__
+**How to use redux-form?**
+
 - import into `reducer/index.js` and add it to the combineReducers object
 
 ```js
@@ -1861,7 +1866,7 @@ export default combineReducers({
 
 - added a first Field component to StreamCreate
 - in `<Field component={comp} />` a component (e.g. input) has to be wired. The component receives a bunch of props including callback handlers via redux forms, this can be easily checked via `console.log(formProps)`
-- whenever a property appears in Field component that is not known how to handle, Redux Form just passes it as additional property. This way it can be easily used in the render method (see label beyond) 
+- whenever a property appears in Field component that is not known how to handle, Redux Form just passes it as additional property. This way it can be easily used in the render method (see label beyond)
 
 ```js
 import React from 'react';
@@ -1894,7 +1899,7 @@ class StreamCreate extends React.Component {
 }
 
 export default reduxForm({
-  form: 'streamCreate'
+  form: 'streamCreate',
 })(StreamCreate);
 ```
 
@@ -1903,7 +1908,7 @@ export default reduxForm({
 #### Redux Forms
 
 - Proceeding with coding of my twitch like project. Wiring up the event handling with Redux forms.
-- How to `preventDefault()` with Redux Forms? No need to call that method anymore, Redux Forms takes care about that. onSubmit() is not called with an event Object in this case, instead it has the values of the Fields inputs: 
+- How to `preventDefault()` with Redux Forms? No need to call that method anymore, Redux Forms takes care about that. onSubmit() is not called with an event Object in this case, instead it has the values of the Fields inputs:
 
 ```js
 ...
@@ -1923,7 +1928,7 @@ render() {
 - new method `validate(formValues)` that is used by Redux Forms to do some valdation of form Fields.
 
 ```js
-const validate = formValues => {
+const validate = (formValues) => {
   const errors = {};
 
   if (!formValues.title) {
@@ -1937,7 +1942,7 @@ const validate = formValues => {
 
 export default reduxForm({
   form: 'streamCreate',
-  validate
+  validate,
 })(StreamCreate);
 ```
 
@@ -1964,6 +1969,7 @@ export default reduxForm({
   - Delete a record: DELETE (route `/streams/:id`) => Nothing
 
 #### New directory for API Server in project
+
 The new directory has to be initialized for the use with npm. Just type `npm init` in the directory. npm creates a `package.json` that will be used to configure the new environment.
 Installed the JSON Server with `npm install --save json-server`.
 
@@ -1994,10 +2000,11 @@ Created a new entry for scripts, to start the JSON server
 - new action creator for `createStream()`
 
 ```js
-export const createStream = formValues => async dispatch => {
+export const createStream = (formValues) => async (dispatch) => {
   streams.post('/streams', formValues);
 };
 ```
+
 - wired up Redux Thunk into root index.js
 
 ```js
@@ -2020,17 +2027,19 @@ After Redux Form integration this is the status quo.
 ```js
 export default reduxForm({
   form: 'streamCreate',
-  validate
+  validate,
 })(StreamCreate);
 ```
 
 Solution 1:
 
 ```js
-export default connect()(reduxForm({
-  form: 'streamCreate',
-  validate
-})(StreamCreate));
+export default connect()(
+  reduxForm({
+    form: 'streamCreate',
+    validate,
+  })(StreamCreate)
+);
 ```
 
 Solution 2 (preferred one because easier to read/ more transparent what is happening):
@@ -2038,13 +2047,10 @@ Solution 2 (preferred one because easier to read/ more transparent what is happe
 ```js
 const formWrapped = reduxForm({
   form: 'streamCreate',
-  validate
+  validate,
 })(StreamCreate);
 
-export default connect(
-  null,
-  { createStream }
-)(formWrapped);
+export default connect(null, { createStream })(formWrapped);
 ```
 
 ### R2D49 - September 8th, 2019
@@ -2053,7 +2059,7 @@ export default connect(
 
 - new type entry for `CREATE_STREAM`
 - imported new type to action creator index.js
-- added dispatch with action object to `createStream()` method 
+- added dispatch with action object to `createStream()` method
 
 #### Creating all action creators at once
 
@@ -2091,9 +2097,10 @@ export const deleteStream = id => async dispatch => {
 #### Reducer structure - Object based reducers
 
 Instead of returning an array of streams - as practiced before - this time will return an object. Each object element will be a stream. The key for each element will be the id of the stream. With the object approach the updating process will be much more straightforward
+
 - update => {...state, name:'Hugo'}
 - adding a property => {...state, age: 30}
--- removing a property => {...state, age: undefined} or _.omit(state, 'age')
+  -- removing a property => {...state, age: undefined} or \_.omit(state, 'age')
 
 This will be used in reducer return additionally with key interpolation. Will be look like this for example:
 
@@ -2101,7 +2108,7 @@ This will be used in reducer return additionally with key interpolation. Will be
 const streamReducer = (state = {}, action) => {
   switch (action.type) {
     case EDIT_STREAM:
-      return {...state, [action.payload.id]: action.payload};
+      return { ...state, [action.payload.id]: action.payload };
     default:
       return state;
   }
@@ -2131,7 +2138,7 @@ _.mapKeys(action.payload, 'id');
 - created a `mapStateToProps()` method and turned the Object of streams into an array with `Object.values()`
 
 ```js
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return { streams: Object.values(state.streams) };
 };
 ```
@@ -2168,10 +2175,10 @@ renderAdmin = stream => {
 
 #### Intentional vs. programmatic Navigation
 
-*Intentional Navigation:*
+_Intentional Navigation:_
 User clicks on a link to move to another page.
 
-*Programmatic Navigation:*
+_Programmatic Navigation:_
 The user is forced to another page through code.
 
 Create a BrowserHistory for programmatic Navigation. New file in src folder called `history.js`. This file shall have the following code:
@@ -2199,6 +2206,7 @@ This will create a history Object that can be maintained manually instead of aut
 ### R2D53 - September 13th, 2019
 
 #### Programmatic Navigation with history object
+
 - swapped the button element in `StreamList.js` against a tag with the `Link` component
 
 ```js
@@ -2286,6 +2294,7 @@ render() {
     );
   }
 ```
+
 - tested the new StreamEdit and now happens that the userId is lost after update. Debugging.
   - found that I'm using PUT request in action creator for `editStream()`. PUT always updates/ replaces all properties of a record.
   - changed to PATCH request (only updates some properties of a record) solved the issue.
@@ -2314,7 +2323,7 @@ A solution to get around this could be React Portals.
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const Modal = props => {
+const Modal = (props) => {
   return ReactDOM.createPortal(
     <div className="ui dimmer modals visible active">
       <div className="ui starndard modal visible active">
@@ -2333,10 +2342,11 @@ export default Modal;
 ```html
 ...
 <body>
-...
-    <div id="root"></div>
-    <div id="modal"></div>
-...
+  ...
+  <div id="root"></div>
+  <div id="modal"></div>
+  ...
+</body>
 ```
 
 - added Modal to StreamDelete component.
@@ -2373,7 +2383,7 @@ const StreamDelete = () => {
 ...
 ```
 
-- the Switch component in `react-router-dom` can help with that. Using it tells React to only render the first route that is found and matched. 
+- the Switch component in `react-router-dom` can help with that. Using it tells React to only render the first route that is found and matched.
 
 ```js
 ...
@@ -2399,6 +2409,7 @@ import { Router, Route, Switch } from 'react-router-dom';
 - exported connect
 
 #### RMTP Server
+
 - installed a standalone RMTP Server via `npm install --save node-media-server`
 - documentation can be found on github https://github.com/illuspas/Node-Media-Server
 - the following configration has to be done for singlecore mode in a index.js file
@@ -2412,17 +2423,18 @@ const config = {
     chunk_size: 60000,
     gop_cache: true,
     ping: 30,
-    ping_timeout: 60
+    ping_timeout: 60,
   },
   http: {
     port: 8000,
-    allow_origin: '*'
-  }
+    allow_origin: '*',
+  },
 };
 
-var nms = new NodeMediaServer(config)
+var nms = new NodeMediaServer(config);
 nms.run();
 ```
+
 - edit the package.json and add a start script like this
 
 ```js
@@ -2435,9 +2447,9 @@ nms.run();
 
 #### React Context System
 
-*Props System* Gets data from a parent component to a direct child component
+_Props System_ Gets data from a parent component to a direct child component
 
-*Context System* Gets data from a parent component to any nested child componennt.
+_Context System_ Gets data from a parent component to any nested child componennt.
 
 ### R2D57 - September 17th, 2019
 
@@ -2450,12 +2462,12 @@ nms.run();
 
 I'm reading into metasfresh ERP frontend code to learn more about development with JavaScript, ReactJS and Redux.
 
-- *index.jsx*
-- *App.js*
-- *Login.js*
-- *LoginForm.js*
-- *RawList.js*
-- *SelectionDropdown.js*
+- _index.jsx_
+- _App.js_
+- _Login.js_
+- _LoginForm.js_
+- _RawList.js_
+- _SelectionDropdown.js_
 
 ### R2D58 - September 18th, 2019
 
@@ -2481,7 +2493,7 @@ Debugged and fixed an issue needed for the Friday release of metasfresh. Replace
 
 Creating the initial documetation tags in metasfresh frontend project. On the way documenting the component hierachy to have a better overview how everything works together.
 
-Also reading about not using absolute paths in imports. Using imports like `../../../Button` can make it very error prone when restructuring a project. Since CRA 3 is is possible to use absolute import paths with a jsconfig.json adding compiler options with the baseURL. After that import statements can look like this 
+Also reading about not using absolute paths in imports. Using imports like `../../../Button` can make it very error prone when restructuring a project. Since CRA 3 is is possible to use absolute import paths with a jsconfig.json adding compiler options with the baseURL. After that import statements can look like this
 
 ```js
 import Button from components/Button;
@@ -2511,7 +2523,7 @@ Proceeding with the developer documentation @metasfresh ReactJS frontend project
 
 #### Documenting component hierarchy @metasfresh
 
-After a long day doing a Gap Analysis for a new customer, just did some easy documentation stuff on metasfreshj project. 
+After a long day doing a Gap Analysis for a new customer, just did some easy documentation stuff on metasfreshj project.
 
 ### R2D66 - September 26th, 2019
 
@@ -2580,7 +2592,7 @@ AFter the first few hours I recognize that a lot of knowhow is still there and a
 
 #### Repeating IIFE
 
-Repeating IIFE Concept that will be used a lot in NodeJS to protect code interference between modules. Using the shorthand description of an anonymous funtion encpsulates the code in the function and runs it automatically through direct invocation. 
+Repeating IIFE Concept that will be used a lot in NodeJS to protect code interference between modules. Using the shorthand description of an anonymous funtion encpsulates the code in the function and runs it automatically through direct invocation.
 
 ```js
 // IIFE example
@@ -2588,7 +2600,7 @@ Repeating IIFE Concept that will be used a lot in NodeJS to protect code interfe
 // 2. paranthesis around it turns it into an expression
 // 3. invoking
 // = immediately invoked funtional expression
-(function() {
+(function () {
   var firstname = 'John';
   console.log(firstname);
 })();
@@ -2610,3 +2622,19 @@ Proceeding with coding and learning of NodeJS Modules. I'm recognizing that it i
 #### Structuring Modules in NodeJS
 
 Learning about different module patterns.
+
+### R2D3 - January 27th, 2020
+
+Using require to obtain native modules from https://nodejs.org/docs/latest/api/.
+
+```js
+var util = require('util');
+```
+
+### R2D0 - November 26th, 2020
+
+Back again, willing to dedicate time and being able to set a sufficient priority to get back to my mission of learning Javascript and React properly from ground up. My priorities in the last year were totally focussed on private challenges and it did not feel right nor good for me proceeding with my mission so I paused.
+
+Now 11 months later, challenges tackeled and things moving in the right direction I have found the time and curiosity again to dive into software deleoping moduns again.
+
+So I'm gonna start my Day 0 of "Round 2 - 100 Days of code" again. From COBOL to React.
