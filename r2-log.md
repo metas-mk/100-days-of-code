@@ -2663,3 +2663,7 @@ So I'm gonna start my Day 0 of "Round 2 - 100 Days of code" again. From COBOL to
 
 - Repeating ReactJS basics
 - Breaking into Components. Refactorning a tiny monster card app into ganular components to move the responsibility and behavior into the component itself.
+
+### R2D2 - November 28th, 2020
+
+- State vs. props. Further exercises about components.
