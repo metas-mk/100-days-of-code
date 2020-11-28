@@ -2667,3 +2667,18 @@ So I'm gonna start my Day 0 of "Round 2 - 100 Days of code" again. From COBOL to
 ### R2D2 - November 28th, 2020
 
 - State vs. props. Further exercises about components.
+
+When do we break things down to components
+
+- Reuse components in different location
+- separation of concerns
+- More flexibility
+- Break things down into small chunks so that component does one small thing.
+- easier to test
+- name of component shall reflect what it exactly does
+
+What to think about when developing in React
+
+- Decide on components
+- Decide the stats and where it lives
+- What changes when the state changes
