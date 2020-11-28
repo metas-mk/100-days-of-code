@@ -2658,3 +2658,8 @@ So I'm gonna start my Day 0 of "Round 2 - 100 Days of code" again. From COBOL to
 
 - See Elements (DOM)
 - See React Component Tree/ Hierarchy (React)
+
+### R2D1 - November 27th, 2020
+
+- Repeating ReactJS basics
+- Breaking into Components. Refactorning a tiny monster card app into ganular components to move the responsibility and behavior into the component itself.
