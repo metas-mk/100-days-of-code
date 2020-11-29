@@ -2686,3 +2686,17 @@ What to think about when developing in React
 ### State and props
 
 Example from monster card app: State is created in App component and passed to the sub components as attribute/ prop. As soon as the state changes in App component it trickles down as props to all sub components that uses this state.
+
+### R2D3 - November 29th, 2020
+
+How to implement a search feature example?
+
+- Add `searchField` string to `state`
+- Add a `search input` to `render()`
+  - Add an onChange property to search input
+  - the input value can be received with `e.target.value`
+    - `e` synthetic event
+    - `target` html element of input
+    - `value` content of the input element
+  - use `setState` for adding the value to state `SearchField` property
+    - important! setState is an asynchronous function call. To be able to log what is set to state just use a 2nd argument function callback in setState method. This callback function will the wait until the asynchronous function has been done before logging the content.
