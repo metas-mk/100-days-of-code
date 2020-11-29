@@ -2693,10 +2693,26 @@ How to implement a search feature example?
 
 - Add `searchField` string to `state`
 - Add a `search input` to `render()`
+
   - Add an onChange property to search input
   - the input value can be received with `e.target.value`
     - `e` synthetic event
     - `target` html element of input
     - `value` content of the input element
   - use `setState` for adding the value to state `SearchField` property
+
     - important! setState is an asynchronous function call. To be able to log what is set to state just use a 2nd argument function callback in setState method. This callback function will the wait until the asynchronous function has been done before logging the content.
+
+    How to destructure stae in render method?
+    `const {monsters, searchField } = this.state;`
+
+    How to filter an object prperty of state based on a search input content?
+
+    - destructure the state and receive property in const
+    - create a new filtered array const and use filter() + toLowerCase() to receive a filtered array
+
+    ```javascript
+    const filteredMonsters = monsters.filter((monster) =>
+      monster.name.toLowerCase().includes(searchField.toLowerCase())
+    );
+    ```
