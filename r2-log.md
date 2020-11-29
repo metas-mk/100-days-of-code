@@ -2682,3 +2682,7 @@ What to think about when developing in React
 - Decide on components
 - Decide the stats and where it lives
 - What changes when the state changes
+
+### State and props
+
+Example from monster card app: State is created in App component and passed to the sub components as attribute/ prop. As soon as the state changes in App component it trickles down as props to all sub components that uses this state.
