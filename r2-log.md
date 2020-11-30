@@ -2716,3 +2716,12 @@ How to implement a search feature example?
       monster.name.toLowerCase().includes(searchField.toLowerCase())
     );
     ```
+
+### R2D4 - November 30th, 2020
+
+Functional components:
+
+- don't have access to state
+- don't have access to constructor (class method)
+- don't have access to lifecycle methods
+- more or less only for rendering some html. It get's some props and returns html
