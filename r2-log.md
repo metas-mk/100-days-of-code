@@ -2725,3 +2725,7 @@ Functional components:
 - don't have access to constructor (class method)
 - don't have access to lifecycle methods
 - more or less only for rendering some html. It get's some props and returns html
+
+Why not adding state to SearchBox?
+
+We move up the state so that all sub components have access to it (Lifting up sate).
